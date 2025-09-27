@@ -1,1 +1,1 @@
-# fullstack
+This is my personal portfolio website built with HTML, Tailwind CSS, and JavaScript. It highlights my skills in cybersecurity, networking, and web development, featuring sections for education, certifications, and projects. The design is fully responsive with smooth navigation, animations, and interactive effects, making it both professional and engaging.
