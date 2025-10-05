@@ -865,6 +865,737 @@ Email: rhyzilangelo@gmail.com
             from, to { border-color: transparent }
             50% { border-color: #3b82f6; }
         }
+        
+        .resume-button {
+            transition: all 0.3s ease;
+        }
+        
+        .resume-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+   <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">
+                Rhyzil<span class="text-secondary">.dev</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active-nav text-gray-700 hover:text-primary transition">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a>
+                <a href="#education" class="nav-link text-gray-700 hover:text-primary transition">Education</a>
+                <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition">Certifications</a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition">Projects</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+        <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
+        <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
+        <a href="#education" class="block py-2 text-gray-700 hover:text-primary transition">Education</a>
+        <a href="#certifications" class="block py-2 text-gray-700 hover:text-primary transition">Certifications</a>
+        <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition">Projects</a>
+    </div>
+</nav>
+
+   <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">           
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Hi, I'm <span class="text-primary">Rhyzil Angelo Pabadora Jimenez</span>
+                </h1>
+                
+                <div class="typewriter text-xl md:text-2xl text-gray-600 mb-6">
+                    IT Student & Cybersecurity Enthusiast
+                </div>
+                
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    3rd Year Bachelor of Science in Information Technology student with growing expertise in 
+                    cybersecurity, networking, and web development.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <a href="#certifications" class="bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:bg-secondary transition">
+                        View Certifications
+                    </a>
+                    <a href="#about" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+                        Learn More
+                    </a>
+                    <button onclick="downloadResume()" class="resume-button bg-accent text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+           
+            <div class="md:w-2/5 relative">
+                <div class="bg-white p-2 rounded-2xl shadow-xl">
+                    <img 
+                      src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGV2ZWxvcGVyfGVufDB8fDB8fHww" 
+                      alt="Profile Picture" 
+                      class="rounded-2xl w-full max-w-sm mx-auto"
+                      loading="lazy"
+                    />
+                </div>
+                
+                <div class="absolute -top-4 -right-4 bg-accent text-white p-4 rounded-lg shadow-lg floating-shape">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                
+                <div class="absolute -bottom-4 -left-4 bg-primary text-white p-4 rounded-lg shadow-lg floating-shape" style="animation-delay: 2s;">
+                    <i class="fas fa-laptop-code text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">About Me</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <p class="text-gray-600 mb-4">I am Rhyzil Angelo Pabadora Jimenez, an IT Student with a strong foundation in cybersecurity, networking, and software development. I'm passionate about protecting digital assets and creating secure, efficient technology solutions.</p>
+                    <p class="text-gray-600 mb-4">I live in Crossing Otabon, Tabango, Leyte, where I've developed my skills through both formal education and hands-on experience with industry-leading technologies.</p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Cybersecurity</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Network Security</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Html</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Css</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">JavaScript</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Microsoft Entra ID</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Identity Management</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">IoT</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Ethical Hacking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal Details</h3>
+                        <div class="space-y-3">
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Full Name:</div>
+                                <div class="w-2/3 text-gray-600">Rhyzil Angelo Pabadora Jimenez</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Location:</div>
+                                <div class="w-2/3 text-gray-600">Crossing Otabon, Tabango, Leyte</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Education:</div>
+                                <div class="w-2/3 text-gray-600">BS in Information Technology</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Interests:</div>
+                                <div class="w-2/3 text-gray-600">Cybersecurity, Web Development, IoT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">Education & Training</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Formal Education</h3>
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Bachelor of Science in Information Technology (BSIT)</h4>
+                            <p class="text-gray-600">Palompon Institute of Technology - Tabango</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Shielded Metal Arc Welding (SMAW)</h4>
+                            <p class="text-gray-600">Technical Vocational Education</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">High School</h4>
+                            <p class="text-gray-600">Marcelino R. Veloso National High School</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Elementary</h4>
+                            <p class="text-gray-600">Tabango Central School</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Specialized Training</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-2 mt-1 mr-4">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Cisco Networking Academy</h4>
+                                <p class="text-gray-600">Completed multiple cybersecurity and networking courses</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mt-1 mr-4">
+                                <i class="fab fa-microsoft text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Microsoft Learn</h4>
+                                <p class="text-gray-600">Completed identity and security-related certifications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent rounded-full p-2 mt-1 mr-4">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Web Development</h4>
+                                <p class="text-gray-600">JavaScript Essentials and modern web technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certifications" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">Certifications</h2>
+            <p class="text-gray-600 mb-8">I have completed various certifications from leading technology providers to enhance my skills in cybersecurity, networking, and IT management.</p>
+            
+            <div class="flex flex-col items-center justify-center mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-network-wired text-green-600 mr-3"></i> 
+                    𝙄𝙉𝙏𝙀𝙉𝙏 𝘾𝙊𝘿𝙀 𝙈𝘼𝙎𝙏𝙀𝙍𝙎 2025
+                </h3>
+                <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden w-full max-w-md">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fas fa-award text-3xl text-blue-600"></i>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Participation</span>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Certificate of Participation</h4>
+                        <p class="text-gray-600 text-sm mb-2">Awarded to participants of</p>
+                        <p class="font-medium text-gray-700 text-sm mb-4">
+                            Intent Code Masters 2025<br>
+                            Coding Competition (Java Category)
+                        </p>
+                        <p class="text-gray-600 text-sm mb-4">Palompon Institute of Technology - Tabango Campus</p>
+                        <div class="text-xs text-gray-500">February 14, 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                    <i class="fab fa-microsoft text-primary mr-3"></i> Microsoft Certifications
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Create, configure, and manage identities</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Describe application-based threats and protection</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Authentication and authorization in cybersecurity</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Basic cybersecurity threats, attacks, and mitigations</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Concepts of cryptography</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Device-based threats and security controls</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Network-based threats and mitigations</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Authentication capabilities of Microsoft Entra ID</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Function and identity types of Microsoft Entra ID</h4>
+                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
+                            <div class="text-xs text-gray-500">September 23, 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-network-wired text-green-600 mr-3"></i> Cisco Certifications
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Ethical Hacker</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 19, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Introduction to Cybersecurity</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 19, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Introduction to IoT and Digital Transformation</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 20, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-code text-3xl text-blue-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">HTML Essentials</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 19, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-code text-3xl text-blue-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">CSS Essentials</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 25, 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <i class="fas fa-code text-3xl text-blue-600"></i>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 mb-2">JavaScript Essentials</h4>
+                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
+                            <div class="text-xs text-gray-500">September 25, 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t1.15752-9/552562462_1979505856170984_5168781225215704504_n.png?stp=dst-png_s640x640&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeG35u25Y32eNRT_lAZGXrIwJ3kV0BvY4AEneRXQG9jgAVDv0VZ2sfwIqAJHfSJ_IasFqd4d8Rlm_dhH-wyS4PG7&_nc_ohc=X8adNd9HkRgQ7kNvwHqR9qD&_nc_oc=AdmCTxUbBIUPKsbn-mcZ8ZyKW8Hkv8LDdfvUoJdpsID7OX_4bX38I8eNKb3ai9SpLx3PqkEveFJmXKOBwkRXJqjL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&oh=03_Q7cD3QFXDLDb9QsCQ1XtNn4yv8dzNu3SVWwRwMR7jqdee4Am4Q&oe=68FC8C6F" 
+                         alt="Portfolio Website Project" class="rounded-lg mb-4 w-full h-60 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🌐 Rhyzil.Dev Portfolio</h3>
+                    <p class="text-gray-600 mb-2">
+                        I designed and developed my personal portfolio website using <strong>HTML5, Tailwind CSS, and Font Awesome</strong>, with smooth animations and responsive layouts. 
+                        The site highlights my journey as a BSIT student specializing in cybersecurity, networking, and web development.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm mb-2">
+                        <li>Responsive design for all devices</li>
+                        <li>Smooth scrolling & interactive navigation</li>
+                        <li>Typewriter animation for title</li>
+                        <li>Floating shape effects</li>
+                        <li>Showcase of certifications (Microsoft & Cisco)</li>
+                        <li>Quick contact links to LinkedIn, Facebook, and Email</li>
+                    </ul>
+                    <p class="text-gray-600 text-sm">🛠 Tech Stack: HTML, Tailwind CSS, JavaScript, Font Awesome, Google Fonts</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/552261595_4160883670866091_1956237650156238535_n.png?stp=dst-png_s640x640&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFu9XZqL12697XsYgGBMu6H1V1W8Qn08KHVXVbxCfTwoUIhujw7K-0KxJpSVV5xG39WQOa4mG6sqkFZ7xbQjjmX&_nc_ohc=BbgigmAbSvQQ7kNvwGF0S0A&_nc_oc=AdmvEmO24E6SeJJrp0wb_8a-QNTxJ1QPPTxFKPNJZvFafakzCQ9i7vAYj2qTsaRCUGaflPCzHz1BEjq7AvAyB6iS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&oh=03_Q7cD3QHLKHH8qfwP6XaTSxr89SD41KiTy5BeoTQSB5Yq4L7VTQ&oe=68FC9ABF" 
+                         alt="Age Calculator Project" class="rounded-lg mb-4 w-full h-60 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🧮 Age Calculator</h3>
+                    <p class="text-gray-600">
+                        I designed and developed an <strong>Age Calculator Application</strong> using HTML, Tailwind CSS, and JavaScript. 
+                        The app allows users to enter their birth date and instantly calculates their exact age in years, months, and days. 
+                        It also provides extra details such as the day they were born, their birthstone, and zodiac sign.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm mb-2">
+                        <li>Real-time age calculation</li>
+                        <li>Day of the week display</li>
+                        <li>Birthstone information</li>
+                        <li>Zodiac sign identification</li>
+                        <li>Responsive and user-friendly interface</li>
+                    </ul>
+                    <p class="text-gray-600 text-sm">🛠 Tech Stack: HTML, Tailwind CSS, JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Rhyzil<span class="text-primary">.dev</span></h3>
+                    <p class="text-gray-400 mt-2">IT Student & Cybersecurity Enthusiast</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BfJQz1r1R/" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="mailto:rhyzilangelo@gmail.com" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Rhyzil Angelo Pabadora Jimenez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Download Resume Function
+        function downloadResume() {
+            // Create a formatted resume content
+            const resumeContent = `
+RHYSIL ANGELO PABADORA JIMENEZ
+================================
+Crossing Otabon, Tabango, Leyte
+rhyzilangelo@gmail.com
+
+EDUCATION
+---------
+Bachelor of Science in Information Technology (BSIT)
+Palompon Institute of Technology - Tabango
+2022 - Present
+
+Shielded Metal Arc Welding (SMAW)
+Technical Vocational Education
+
+High School
+Marcelino R. Veloso National High School
+
+Elementary
+Tabango Central School
+
+CERTIFICATIONS
+--------------
+Microsoft Certifications:
+- Create, configure, and manage identities
+- Describe application-based threats and protection
+- Authentication and authorization in cybersecurity
+- Basic cybersecurity threats, attacks, and mitigations
+- Concepts of cryptography
+- Device-based threats and security controls
+- Network-based threats and mitigations
+- Authentication capabilities of Microsoft Entra ID
+- Function and identity types of Microsoft Entra ID
+
+Cisco Certifications:
+- Ethical Hacker
+- Introduction to Cybersecurity
+- Introduction to IoT and Digital Transformation
+- HTML Essentials
+- CSS Essentials
+- JavaScript Essentials
+
+Intent Code Masters 2025:
+- Certificate of Participation - Java Category
+
+TECHNICAL SKILLS
+----------------
+Cybersecurity, Network Security, HTML, CSS, JavaScript, 
+Microsoft Entra ID, Identity Management, IoT, Ethical Hacking
+
+PROJECTS
+--------
+Rhyzil.Dev Portfolio Website
+- Responsive portfolio showcasing certifications and skills
+- Built with HTML, Tailwind CSS, and JavaScript
+
+Age Calculator Application
+- Interactive app to calculate exact age with additional details
+- Built with HTML, Tailwind CSS, and JavaScript
+
+CONTACT
+-------
+LinkedIn: https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/
+Facebook: https://www.facebook.com/share/1BfJQz1r1R/
+Email: rhyzilangelo@gmail.com
+            `;
+
+            // Create a Blob with the resume content
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            
+            // Create a download link
+            const downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = 'Rhyzil_Angelo_Jimenez_Resume.txt';
+            
+            // Trigger the download
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+</html>        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background-color: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active-nav::after {
+            width: 100%;
+        }
+        
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
