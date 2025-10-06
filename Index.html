@@ -158,7 +158,6 @@
                 <a href="#education" class="nav-link text-gray-700 hover:text-primary transition">Education</a>
                 <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition">Certifications</a>
                 <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition">Projects</a>
-                <a href="#blog" class="nav-link text-gray-700 hover:text-primary transition">Blog</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-gray-700 focus:outline-none">
@@ -167,6 +166,238 @@
             </div>
         </div>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+        <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
+        <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
+        <a href="#education" class="block py-2 text-gray-700 hover:text-primary transition">Education</a>
+        <a href="#certifications" class="block py-2 text-gray-700 hover:text-primary transition">Certifications</a>
+        <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition">Projects</a>
+    </div>
+</nav>
+
+   <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">           
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Hi, I'm <span class="text-primary">Rhyzil Angelo Pabadora Jimenez</span>
+                </h1>
+                
+                <div class="typewriter text-xl md:text-2xl text-gray-600 mb-6">
+                    IT Student & Cybersecurity Enthusiast
+                </div>
+                
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    3rd Year Bachelor of Science in Information Technology student with growing expertise in 
+                    cybersecurity, networking, and web development.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <a href="#certifications" class="bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:bg-secondary transition">
+                        View Certifications
+                    </a>
+                    <a href="#about" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+                        Learn More
+                    </a>
+                    <button onclick="downloadResume()" class="resume-button bg-accent text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+           
+            <div class="md:w-2/5 relative">
+                <div class="bg-white p-2 rounded-2xl shadow-xl">
+                    <img 
+                      src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGV2ZWxvcGVyfGVufDB8fDB8fHww" 
+                      alt="Profile Picture" 
+                      class="rounded-2xl w-full max-w-sm mx-auto"
+                      loading="lazy"
+                    />
+                </div>
+                
+                <div class="absolute -top-4 -right-4 bg-accent text-white p-4 rounded-lg shadow-lg floating-shape">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                
+                <div class="absolute -bottom-4 -left-4 bg-primary text-white p-4 rounded-lg shadow-lg floating-shape" style="animation-delay: 2s;">
+                    <i class="fas fa-laptop-code text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">About Me</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <p class="text-gray-600 mb-4">I am Rhyzil Angelo Pabadora Jimenez, an IT Student with a strong foundation in cybersecurity, networking, and software development. I'm passionate about protecting digital assets and creating secure, efficient technology solutions.</p>
+                    <p class="text-gray-600 mb-4">I live in Crossing Otabon, Tabango, Leyte, where I've developed my skills through both formal education and hands-on experience with industry-leading technologies.</p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Cybersecurity</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Network Security</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Html</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Css</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">JavaScript</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Microsoft Entra ID</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Identity Management</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">IoT</span>
+                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Ethical Hacking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal Details</h3>
+                        <div class="space-y-3">
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Full Name:</div>
+                                <div class="w-2/3 text-gray-600">Rhyzil Angelo Pabadora Jimenez</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Location:</div>
+                                <div class="w-2/3 text-gray-600">Crossing Otabon, Tabango, Leyte</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Education:</div>
+                                <div class="w-2/3 text-gray-600">BS in Information Technology</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-1/3 font-medium text-gray-700">Interests:</div>
+                                <div class="w-2/3 text-gray-600">Cybersecurity, Web Development, IoT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 section-title">Education & Training</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Formal Education</h3>
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Bachelor of Science in Information Technology (BSIT)</h4>
+                            <p class="text-gray-600">Palompon Institute of Technology - Tabango</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Shielded Metal Arc Welding (SMAW)</h4>
+                            <p class="text-gray-600">Technical Vocational Education</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">High School</h4>
+                            <p class="text-gray-600">Marcelino R. Veloso National High School</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-gray-800">Elementary</h4>
+                            <p class="text-gray-600">Tabango Central School</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Specialized Training</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-2 mt-1 mr-4">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Cisco Networking Academy</h4>
+                                <p class="text-gray-600">Completed multiple cybersecurity and networking courses</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary rounded-full p-2 mt-1 mr-4">
+                                <i class="fab fa-microsoft text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Microsoft Learn</h4>
+                                <p class="text-gray-600">Completed identity and security-related certifications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent rounded-full p-2 mt-1 mr-4">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Web Development</h4>
+                                <p class="text-gray-600">JavaScript Essentials and modern web technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BLOG SECTION -->
+<section id="blog" class="bg-gray-900 text-white py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center">
+      Latest <span class="text-primary">Blog Posts</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Front-End Project -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80"
+             alt="Front-End Project"
+             class="w-full h-48 object-cover object-center">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold mb-2">How I Built My First Front-End Project</h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            A breakdown of my journey creating a responsive website using HTML, Tailwind CSS, and JavaScript.
+          </p>
+          <a href="#" class="text-primary font-semibold hover:underline mt-auto">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Cybersecurity Basics -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAPFBMVEX////G6fxsyvk/v/g4vfhhyPmz4vuK1PoAtfckufgvu/hTxPn6/f+h2/tGwPjS7v255fxMwviT1/qn3vsZjXhWAAAAbElEQVR4AeWOCQqAMAwEq11r06b3//9qAwiI0QfowHINC2N+yLJabE53uycgUGTtF11CmDqLLVdZ57iJhSt9V+4cCQB5a1RGJgr9FrrW866GbmpoGylISlNC3RxnsbY+hLbX0GSJIKE6zOajHN4ZA8/fNs9XAAAAAElFTkSuQmCC"
+             alt="Cybersecurity Basics"
+             class="w-full h-48 object-cover object-center">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of Cybersecurity</h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            Learn the fundamental concepts of cybersecurity and how to protect your personal information.
+          </p>
+          <a href="https://www.adelaideuni.edu.au/study/online/"
+             class="text-primary font-semibold hover:underline mt-auto"
+             target="_blank" rel="noopener noreferrer">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Mastering Tailwind CSS -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAPFBMVEX////G6fxsyvk/v/g4vfhhyPmz4vuK1PoAtfckufgvu/hTxPn6/f+h2/tGwPjS7v255fxMwviT1/qn3vsZjXhWAAAAbElEQVR4AeWOCQqAMAwEq11r06b3//9qAwiI0QfowHINC2N+yLJabE53uycgUGTtF11CmDqLLVdZ57iJhSt9V+4cCQB5a1RGJgr9FrrW866GbmpoGylISlNC3RxnsbY+hLbX0GSJIKE6zOajHN4ZA8/fNs9XAAAAAElFTkSuQmCC"
+             alt="Mastering Tailwind CSS"
+             class="w-full h-48 object-cover object-center">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold mb-2">Mastering Tailwind CSS</h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            My top tips and tricks for building modern, beautiful interfaces faster with Tailwind CSS.
+          </p>
+          <a href="https://tailwindcss.com/"
+             class="text-primary font-semibold hover:underline mt-auto"
+             target="_blank" rel="noopener noreferrer">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+      <!-- PHP -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAllBMVEUAAABPW5NPW5NPW5NPW5NPW5NPW5NPW5NfaJtSXpVsdaD8/f1bZZmcoLr////r6/FkbZxocZ6+wdHX2eJNWpPy8/b19vi6vc7b3OX4+PrO0NxWYZbDxdT6+/zf4Oju7/Ohpb3j5Ovq6u/l5uxgapukqMCQlbOrr8TU1eCAhqp0fKSws8eFi62Vmra3uszR097KzNlPW5OhRzWhAAAAMnRSTlMAKbH0//Cw8///////////////////////////////////////////////////////KIExa5sAAAEmSURBVHgBvNBFYsNAEERRQZkGyhaamdn3P11aGFZ2+RvR05DjuJ6PX/I9V7630FDLdTw01nZ8NNZx8Ef/D7rdXiNQWptGYNnHT2AQBMGgByBkVNyYQDJxCeKEUjoERpTGkylmlOYjVQBFjhZLcoWE68Umu1lwM9pqRgWwXAJYcBJQ7yB    </div>
     <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
         <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
         <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
