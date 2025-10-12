@@ -336,7 +336,10 @@
             </div>
         </div>
     </section>
-<section id="blog" class="bg-gray-900 text-white py-16">
+    </div>
+  </div>
+
+    <section id="blog" class="bg-gray-900 text-white py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold mb-12 text-center">
       Latest <span class="text-primary">Blog Posts</span>
@@ -344,10 +347,10 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      
+      <!-- Blog Post 1 -->
       <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
         <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80"
-             alt="Front-End Project"
+             alt="Front-End Project" loading="lazy"
              class="w-full h-48 object-cover object-center">
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2">How I Built My First Front-End Project</h3>
@@ -357,9 +360,11 @@
           <a href="#" class="text-primary font-semibold hover:underline mt-auto">Read More →</a>
         </div>
       </div>
+
+      <!-- Blog Post 2 -->
       <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=80"
-             alt="Cybersecurity Basics"
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+             alt="Cybersecurity Basics" loading="lazy"
              class="w-full h-48 object-cover object-center">
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of Cybersecurity</h3>
@@ -368,15 +373,13 @@
           </p>
           <a href="https://www.adelaideuni.edu.au/study/online/"
              class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">
-            
-          </a>
+             target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </div>
 
+      <!-- Blog Post 3 -->
       <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="data:image/jpeg;base64,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"
-             alt="Mastering Tailwind CSS"
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Mastering Tailwind CSS" loading="lazy"
              class="w-full h-48 object-cover object-center">
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2">Mastering Tailwind CSS</h3>
@@ -385,15 +388,14 @@
           </p>
           <a href="https://tailwindcss.com/"
              class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">
-            
-          </a>
+             target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </div>
 
+      <!-- Blog Post 4 -->
       <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYlC9coY7UOOE5O3Qvn7EKLBSvT4gzzUzqw&s="
-             alt="PHP Logo"
+             alt="PHP Logo" loading="lazy"
              class="w-full h-48 object-cover object-center">
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2">Getting Started with PHP</h3>
@@ -402,32 +404,30 @@
           </p>
           <a href="https://en.m.wikipedia.org/wiki/PHP"
              class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png"
-       alt="HTML5 Logo"
-       class="w-full h-48 object-contain object-center bg-white p-4">
-  <div class="p-6 flex flex-col flex-grow">
-    <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of HTML</h3>
-    <p class="text-gray-400 mb-4 flex-grow">
-      Discover the building blocks of the web with HTML. Learn how to structure web pages using tags and semantic elements.
-    </p>
-    <a href="https://en.wikipedia.org/wiki/HTML"
-       class="text-primary font-semibold hover:underline mt-auto"
-       target="_blank" rel="noopener noreferrer">
-      
-    </a>
-  </div>
-        </div>
-              
-          </a>
+             target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </div>
 
-      
+      <!-- Blog Post 5 -->
       <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="data:image/png;base64,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"
-             alt="Laravel Logo"
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png"
+             alt="HTML5 Logo" loading="lazy"
+             class="w-full h-48 object-contain bg-white p-6 rounded-t-2xl">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of HTML</h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            Discover the building blocks of the web with HTML. Learn how to structure web pages using tags and semantic elements.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/HTML"
+             class="text-primary font-semibold hover:underline mt-auto"
+             target="_blank" rel="noopener noreferrer">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 6 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADlCAMAAAAP8WnW..." 
+             alt="Laravel Logo" loading="lazy"
              class="w-full h-48 object-cover object-center">
         <div class="p-6 flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2">Exploring Laravel</h3>
@@ -436,14 +436,14 @@
           </p>
           <a href="https://laravel.com/"
              class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">
-            
-          </a>
+             target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </div>
 
     </div>
   </div>
+</section>
+
 </section>
 
     <section id="certifications" class="py-16 bg-white">
