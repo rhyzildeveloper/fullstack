@@ -760,42 +760,47 @@
     </div>
 </section>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-2xl font-bold">Rhyzil<span class="text-primary">.dev</span></h3>
-                    <p class="text-gray-400 mt-2">IT Student & Cybersecurity Enthusiast</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/1BfJQz1r1R/" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-facebook text-xl"></i>
-                    </a>
-                    <a href="mailto:rhyzilangelopabadorajimenez@gmail.com" class="text-gray-400 hover:text-white transition">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@rhyziljimenez" class="text-gray-400 hover:text-white transition">
-                    <i class="fab fa-tiktok text-xl"></i>
-                    </a>
-                    
-                </div>
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center md:flex-row md:justify-between md:items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold">
+                    Rhyzil<span class="text-primary">.dev</span>
+                </h3>
+                <p class="text-gray-400 mt-2">
+                    IT Student & Cybersecurity Enthusiast
+                </p>
             </div>
-            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
-                <p>&copy; 2025 Rhyzil Angelo Pabadora Jimenez. All rights reserved.</p>
+
+            <div class="flex space-x-6">
+                <a href="https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1BfJQz1r1R/" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="mailto:rhyzilangelopabadorajimenez@gmail.com" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@rhyziljimenez" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-tiktok text-xl"></i>
+                </a>
             </div>
         </div>
-    </footer>
+
+        <!-- Bottom copyright -->
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+            <p>&copy; 2025 Rhyzil Angelo Pabadora Jimenez. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
 
     <script>
-        // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -809,13 +814,11 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
                     document.getElementById('mobile-menu').classList.add('hidden');
                 }
             });
         });
 
-        // Update active nav link on scroll
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -838,9 +841,7 @@
             });
         });
 
-        // Download Resume Function
         function downloadResume() {
-            // Create a formatted resume content
             const resumeContent = `
 RHYSIL ANGELO PABADORA JIMENEZ
 ================================
@@ -908,15 +909,12 @@ Facebook: https://www.facebook.com/share/1BfJQz1r1R/
 Email: rhyzilangelo@gmail.com
             `;
 
-            // Create a Blob with the resume content
             const blob = new Blob([resumeContent], { type: 'text/plain' });
             
-            // Create a download link
             const downloadLink = document.createElement('a');
             downloadLink.href = URL.createObjectURL(blob);
             downloadLink.download = 'Rhyzil_Angelo_Jimenez_Resume.txt';
             
-            // Trigger the download
             document.body.appendChild(downloadLink);
             downloadLink.click();
             document.body.removeChild(downloadLink);
