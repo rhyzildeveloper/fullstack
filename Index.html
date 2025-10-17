@@ -875,8 +875,7 @@
     });
 
     function downloadResume() {
-        const resumeContent = `
-RHYZIL ANGELO PABADORA JIMENEZ
+        const resumeContent = `RHYZIL ANGELO PABADORA JIMENEZ
 ================================
 Crossing Otabon, Tabango, Leyte
 rhyzilangelo@gmail.com
@@ -939,8 +938,7 @@ CONTACT
 -------
 LinkedIn: https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/
 Facebook: https://www.facebook.com/share/1BfJQz1r1R/
-Email: rhyzilangelo@gmail.com
-        `;
+Email: rhyzilangelo@gmail.com`;
 
         const blob = new Blob([resumeContent], { type: 'text/plain' });
         
@@ -994,13 +992,15 @@ Email: rhyzilangelo@gmail.com
         chatInput.style.margin = '10px';
         chatInput.style.border = '1px solid #ccc';
         chatInput.style.borderRadius = '5px';
-        chatInput.placeholder = 'Type your message...';
+        chatInput.placeholder = 'Ask me about my portfolio...';
         chatContainer.appendChild(chatInput);
 
         chatInput.addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
-                const userMessage = chatInput.value;
-                if (userMessage.trim() === '') return;
+                const userMessage = chatInput.value.trim();
+                if (userMessage === '') return;
+
+                // Display user's message
                 const userMessageElement = document.createElement('div');
                 userMessageElement.style.padding = '5px';
                 userMessageElement.style.marginBottom = '5px';
@@ -1010,14 +1010,37 @@ Email: rhyzilangelo@gmail.com
                 chatBody.appendChild(userMessageElement);
                 chatInput.value = '';
 
-                const botResponse = document.createElement('div');
-                botResponse.style.padding = '5px';
-                botResponse.style.marginBottom = '5px';
-                botResponse.style.backgroundColor = '#007bff';
-                botResponse.style.color = '#fff';
-                botResponse.style.borderRadius = '5px';
-                botResponse.innerText = 'AI Response: ' + 'How can I help you?';
-                chatBody.appendChild(botResponse);
+                // Generate bot's response based on user input
+                let botResponse = 'Sorry, I didn\'t understand that. Can you rephrase?';
+
+                const userLower = userMessage.toLowerCase();
+
+                // Handling portfolio-related questions
+                if (userLower.includes('education')) {
+                    botResponse = 'I am currently pursuing a Bachelor of Science in Information Technology at Palompon Institute of Technology - Tabango (2022 - Present).';
+                } else if (userLower.includes('certifications')) {
+                    botResponse = 'I hold various Microsoft and Cisco certifications, including ethical hacking and cybersecurity courses.';
+                } else if (userLower.includes('projects')) {
+                    botResponse = 'Some of my projects include a portfolio website and an Age Calculator app, both built using HTML, Tailwind CSS, and JavaScript.';
+                } else if (userLower.includes('skills') || userLower.includes('technologies')) {
+                    botResponse = 'I have skills in Cybersecurity, Network Security, HTML, CSS, JavaScript, Microsoft Entra ID, IoT, and Ethical Hacking.';
+                } else if (userLower.includes('resume')) {
+                    botResponse = 'You can download my resume by clicking the button on my website or just ask me to download it for you!';
+                } else if (userLower.includes('contact')) {
+                    botResponse = 'You can reach me via LinkedIn or email: rhyzilangelo@gmail.com';
+                } else if (userLower.includes('how are you') || userLower.includes('hi') || userLower.includes('hello')) {
+                    botResponse = 'Hello! I\'m a chatbot here to answer your questions about my portfolio. How can I assist you today?';
+                }
+
+                // Display bot's response
+                const botResponseElement = document.createElement('div');
+                botResponseElement.style.padding = '5px';
+                botResponseElement.style.marginBottom = '5px';
+                botResponseElement.style.backgroundColor = '#007bff';
+                botResponseElement.style.color = '#fff';
+                botResponseElement.style.borderRadius = '5px';
+                botResponseElement.innerText = botResponse;
+                chatBody.appendChild(botResponseElement);
                 chatBody.scrollTop = chatBody.scrollHeight;
             }
         });
@@ -1025,6 +1048,7 @@ Email: rhyzilangelo@gmail.com
 
     loadChatBot();
 </script>
+
 
 </body>
 </html>
