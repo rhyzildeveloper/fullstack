@@ -829,53 +829,53 @@
 </footer>
 
 
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+   <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
                 
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
         });
+    });
 
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active-nav');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active-nav');
-                }
-            });
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
         });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active-nav');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active-nav');
+            }
+        });
+    });
 
-        function downloadResume() {
-            const resumeContent = `
+    function downloadResume() {
+        const resumeContent = `
 RHYZIL ANGELO PABADORA JIMENEZ
 ================================
 Crossing Otabon, Tabango, Leyte
@@ -940,18 +940,91 @@ CONTACT
 LinkedIn: https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/
 Facebook: https://www.facebook.com/share/1BfJQz1r1R/
 Email: rhyzilangelo@gmail.com
-            `;
+        `;
 
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            
-            const downloadLink = document.createElement('a');
-            downloadLink.href = URL.createObjectURL(blob);
-            downloadLink.download = 'Rhyzil_Angelo_Jimenez_Resume.txt';
-            
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-        }
-    </script>
+        const blob = new Blob([resumeContent], { type: 'text/plain' });
+        
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = 'Rhyzil_Angelo_Jimenez_Resume.txt';
+        
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+
+    function preventCopy(event) {
+        event.preventDefault();
+        alert("Copying content is not allowed!");
+    }
+
+    document.addEventListener('copy', preventCopy);
+
+    function loadChatBot() {
+        const chatContainer = document.createElement('div');
+        chatContainer.setAttribute('id', 'chatbot');
+        chatContainer.style.position = 'fixed';
+        chatContainer.style.bottom = '20px';
+        chatContainer.style.right = '20px';
+        chatContainer.style.width = '300px';
+        chatContainer.style.height = '400px';
+        chatContainer.style.backgroundColor = '#fff';
+        chatContainer.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.2)';
+        chatContainer.style.borderRadius = '10px';
+        document.body.appendChild(chatContainer);
+
+        const chatHeader = document.createElement('div');
+        chatHeader.style.padding = '10px';
+        chatHeader.style.backgroundColor = '#007bff';
+        chatHeader.style.color = '#fff';
+        chatHeader.style.textAlign = 'center';
+        chatHeader.innerText = 'AI Chatbot';
+        chatContainer.appendChild(chatHeader);
+
+        const chatBody = document.createElement('div');
+        chatBody.style.padding = '10px';
+        chatBody.style.height = '300px';
+        chatBody.style.overflowY = 'scroll';
+        chatContainer.appendChild(chatBody);
+
+        const chatInput = document.createElement('input');
+        chatInput.type = 'text';
+        chatInput.style.width = 'calc(100% - 20px)';
+        chatInput.style.padding = '10px';
+        chatInput.style.margin = '10px';
+        chatInput.style.border = '1px solid #ccc';
+        chatInput.style.borderRadius = '5px';
+        chatInput.placeholder = 'Type your message...';
+        chatContainer.appendChild(chatInput);
+
+        chatInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const userMessage = chatInput.value;
+                if (userMessage.trim() === '') return;
+                const userMessageElement = document.createElement('div');
+                userMessageElement.style.padding = '5px';
+                userMessageElement.style.marginBottom = '5px';
+                userMessageElement.style.backgroundColor = '#f1f1f1';
+                userMessageElement.style.borderRadius = '5px';
+                userMessageElement.innerText = userMessage;
+                chatBody.appendChild(userMessageElement);
+                chatInput.value = '';
+
+                const botResponse = document.createElement('div');
+                botResponse.style.padding = '5px';
+                botResponse.style.marginBottom = '5px';
+                botResponse.style.backgroundColor = '#007bff';
+                botResponse.style.color = '#fff';
+                botResponse.style.borderRadius = '5px';
+                botResponse.innerText = 'AI Response: ' + 'How can I help you?';
+                chatBody.appendChild(botResponse);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        });
+    }
+
+    loadChatBot();
+</script>
+
 </body>
 </html>
