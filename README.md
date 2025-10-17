@@ -33,10 +33,3 @@ Welcome to my cutting-edge personal portfolio website, meticulously crafted usin
 
 That sounds more elaborate. Let me check if it's too long. Original is about 70 words; mine is around 100. I can trim it if needed.
 
-Shorter version:
-
-Discover my personal portfolio website, built with HTML, Tailwind CSS, and JavaScript. It spotlights my skills in cybersecurity, networking, and web development through sections on education, certifications, and projects. Enjoy a responsive design with smooth navigation, animations, and interactive features for a professional and immersive experience.
-
-
-
-"Step into my dynamic personal portfolio, engineered with HTML, Tailwind CSS, and JavaScript. Highlighting my prowess in cybersecurity, networking, and web development, it features in-depth sections on education, certifications, and innovative projects. With its responsive layout, seamless navigation, eye-catching animations, and interactive effects, this site delivers a professional edge with an engaging twist."
