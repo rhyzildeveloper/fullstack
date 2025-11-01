@@ -817,6 +817,263 @@
         </div>
     </div>
      </div>
+       <div class="glass-effect rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden flex flex-col backdrop-blur-lg transform hover:scale-105">
+    <div class="relative overflow-hidden">
+        <!-- Image Carousel with 3 Images -->
+        <div class="relative h-48 overflow-hidden">
+            <!-- Login Screen -->
+            <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/557109379_24914766664852269_2832101087681911648_n.png?stp=dst-png_s843x403&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHraZxYxRANxlcrcrJP3nAkO2kGVWTwLr07aQZVZPAuvTALiyjc2NFogRiS342TmQlSN4pDKt9PV6nIsLustRiR&_nc_ohc=BDSkrcOufs0Q7kNvwEZdZMw&_nc_oc=Adm6ysm6yxtragBTsMGAXwSw-e8EpGAdOghUMLyF8oIsn_VrzjNGkFfQAI8nPcbt8XCxuPJ7KRKLPBViDead_J65&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&oh=03_Q7cD3wHRkMC7Gyb-cwSoX3tMi-dYZrEAFu_evNU8lxDVgkaT_g&oe=692CB074" 
+                 alt="Library Log System Login" 
+                 class="w-full h-full object-cover transform transition-all duration-700 carousel-image active">
+            
+            <!-- Dashboard Screen -->
+            <img src="https://scontent.fceb1-3.fna.fbcdn.net/v/t1.15752-9/568684019_842373304848447_2988465898472428110_n.png?stp=dst-png_s843x403&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEVvmjIT4W2oAsSBUpaATPQ8GC2ib0XQzTwYLaJvRdDNEytbW6uL7DqhU2nZessDWSbs9t4Z_Gj1JhO8i11zFnD&_nc_ohc=1cnUNVyZd_oQ7kNvwHWxGTA&_nc_oc=AdlTpkQJl4iXeKtJ-SF8WrgFwQ4VKb35VdZSW_qTEpjVCZKcvHN3JdWOOIzFWKJ5EDWYyS7WjI-XKPJFPGtx4xdL&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&oh=03_Q7cD3wGQ29j1dvxT7E4sv5-g117qICJpZpeV7XbFRzBkbcKBYA&oe=692CBCF0" 
+                 alt="Library Log System Dashboard" 
+                 class="w-full h-full object-cover transform transition-all duration-700 carousel-image">
+            
+            <!-- Signup Screen -->
+            <img src="https://scontent.fceb1-3.fna.fbcdn.net/v/t1.15752-9/566557779_754957487570977_3409044599883041280_n.png?stp=dst-png_s843x403&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFuVr0TtAKACDAPnLvQbCTdOf6rj6negPU5_quPqd6A9Re55l4T6QspCCaSDsJsFGu5pciKliUz9-89eOAtQZtI&_nc_ohc=7CXIw467ONYQ7kNvwHXqhh2&_nc_oc=Adk0dxV5y2U5abYgRZGG5c8CBxep8Qj6txvGqbewQ8I40xdn2mduDnepOB21MNQxzGb8Stuf09CErSBPEi__0gKw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&oh=03_Q7cD3wFOesMrW3IxJopUUQSF6T16ZQ6sfeW8f3JYeNOyPHLxSg&oe=692CBDE7" 
+                 alt="Library Log System Signup" 
+                 class="w-full h-full object-cover transform transition-all duration-700 carousel-image">
+        </div>
+        
+        <!-- Featured Badge -->
+        <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg flex items-center">
+            <i class="fas fa-star mr-1 text-yellow-300"></i>
+            Featured Project
+        </div>
+        
+        <!-- Image Navigation Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div class="w-2 h-2 bg-white rounded-full opacity-100 carousel-dot active" data-index="0"></div>
+            <div class="w-2 h-2 bg-white rounded-full opacity-50 carousel-dot" data-index="1"></div>
+            <div class="w-2 h-2 bg-white rounded-full opacity-50 carousel-dot" data-index="2"></div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all duration-300">
+            <i class="fas fa-chevron-left text-sm"></i>
+        </button>
+        <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all duration-300">
+            <i class="fas fa-chevron-right text-sm"></i>
+        </button>
+    </div>
+    
+    <div class="p-6 flex flex-col flex-grow bg-white bg-opacity-10 backdrop-blur-sm">
+        <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                <i class="fas fa-book-reader text-xl text-white"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-white">📚 Library Log System</h3>
+                <p class="text-blue-200 text-sm mt-1">Complete Student Authentication & Tracking</p>
+            </div>
+        </div>
+        
+        <p class="text-blue-100 mb-4 flex-grow leading-relaxed">
+            A <strong class="text-white">comprehensive library management solution</strong> featuring secure student authentication, 
+            real-time attendance tracking, and automated personal data retrieval. Built with modern web technologies 
+            and featuring a stunning glass morphism interface.
+        </p>
+        
+        <!-- Feature Highlights -->
+        <div class="grid grid-cols-2 gap-2 mb-4">
+            <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
+                <i class="fas fa-user-plus text-green-400 mr-2 text-sm"></i>
+                <span class="text-xs">Student Signup</span>
+            </div>
+            <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
+                <i class="fas fa-sign-in-alt text-blue-400 mr-2 text-sm"></i>
+                <span class="text-xs">Secure Login</span>
+            </div>
+            <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
+                <i class="fas fa-clock text-purple-400 mr-2 text-sm"></i>
+                <span class="text-xs">Time Tracking</span>
+            </div>
+            <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
+                <i class="fas fa-chart-bar text-pink-400 mr-2 text-sm"></i>
+                <span class="text-xs">Live Dashboard</span>
+            </div>
+        </div>
+        
+        <!-- Screen Labels -->
+        <div class="flex justify-center space-x-4 mb-4">
+            <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label active" data-index="0">Login Screen</span>
+            <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label" data-index="1">Dashboard</span>
+            <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label" data-index="2">Signup Form</span>
+        </div>
+        
+        <div class="mt-auto pt-4 border-t border-white border-opacity-20">
+            <div class="flex items-center justify-between mb-3">
+                <p class="text-blue-200 text-sm flex items-center">
+                    <i class="fas fa-layer-group mr-2"></i>
+                    <strong class="text-white">Full Stack: HTML, Tailwind, PHP, MySQL</strong>
+                </p>
+                <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse" title="Live Demo"></div>
+                    <div class="w-2 h-2 bg-blue-400 rounded-full" title="Database Backend"></div>
+                    <div class="w-2 h-2 bg-purple-400 rounded-full" title="Responsive Design"></div>
+                </div>
+            </div>
+            
+            <div class="flex space-x-3">
+                <a href="#" class="group flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-play-circle mr-2"></i>
+                    <span>Live Demo</span>
+                </a>
+                <a href="#" class="group w-12 h-12 bg-white bg-opacity-20 text-white font-semibold rounded-xl hover:bg-opacity-30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="#" class="group w-12 h-12 bg-white bg-opacity-20 text-white font-semibold rounded-xl hover:bg-opacity-30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Carousel Styles */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carousel-dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.carousel-label.active {
+    background: rgba(59, 130, 246, 0.8);
+    color: white;
+}
+
+/* Hover effects */
+.carousel-prev:hover, .carousel-next:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const labels = document.querySelectorAll('.carousel-label');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    
+    let currentIndex = 0;
+    let autoPlayInterval;
+    
+    function showImage(index) {
+        // Hide all images
+        images.forEach(img => {
+            img.classList.remove('active');
+        });
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+            dot.style.opacity = '0.5';
+        });
+        labels.forEach(label => {
+            label.classList.remove('active');
+        });
+        
+        // Show selected image
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
+        dots[index].style.opacity = '1';
+        labels[index].classList.add('active');
+        
+        currentIndex = index;
+    }
+    
+    function nextImage() {
+        let nextIndex = (currentIndex + 1) % images.length;
+        showImage(nextIndex);
+    }
+    
+    function prevImage() {
+        let prevIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(prevIndex);
+    }
+    
+    // Auto-play every 4 seconds
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextImage, 4000);
+    }
+    
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        prevImage();
+        startAutoPlay();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        nextImage();
+        startAutoPlay();
+    });
+    
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            stopAutoPlay();
+            const index = parseInt(e.target.getAttribute('data-index'));
+            showImage(index);
+            startAutoPlay();
+        });
+    });
+    
+    labels.forEach(label => {
+        label.addEventListener('click', (e) => {
+            stopAutoPlay();
+            const index = parseInt(e.target.getAttribute('data-index'));
+            showImage(index);
+            startAutoPlay();
+        });
+    });
+    
+    // Pause auto-play on hover
+    const carousel = document.querySelector('.relative.overflow-hidden');
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+    
+    // Initialize
+    showImage(0);
+    startAutoPlay();
+});
+</script>
+        
   <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-6">
         <div class="flex flex-col items-center md:flex-row md:justify-between md:items-center text-center md:text-left">
