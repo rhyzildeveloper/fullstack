@@ -536,6 +536,89 @@ document.getElementById('portfolioModal').addEventListener('click', function(e) 
         </div>
       </div>
 
+
+        <div id="threejs-card" class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
+  <div id="canvas-container" class="w-full h-48 relative">
+    <canvas id="threejs-canvas" class="w-full h-full"></canvas>
+  </div>
+  
+  <div class="p-6 flex flex-col flex-grow">
+    <h3 class="text-xl font-semibold mb-2 text-white">Mastering Three.js</h3>
+    <p class="text-gray-400 mb-4 flex-grow">
+      My top tips and tricks for building immersive 3D experiences and interactive web graphics with Three.js.
+    </p>
+    <a href="https://threejs.org/"
+       class="text-blue-400 font-semibold hover:underline mt-auto"
+       target="_blank" rel="noopener noreferrer">Read More →</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('canvas-container');
+  const canvas = document.getElementById('threejs-canvas');
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+  
+  renderer.setSize(container.offsetWidth, container.offsetHeight);
+  renderer.setClearColor(0x000000, 0);
+  
+  const ambientLight = new THREE.AmbientLight(0x404040, 2);
+  scene.add(ambientLight);
+  
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+  directionalLight.position.set(1, 1, 1);
+  scene.add(directionalLight);
+  
+  const createThreeJSLogo = () => {
+    const group = new THREE.Group();
+    const colors = [0x049EF4, 0xFF0000, 0xFFFFFF];
+    const barGeometry = new THREE.BoxGeometry(0.3, 1.5, 0.1);
+    
+    colors.forEach((color, index) => {
+      const material = new THREE.MeshPhongMaterial({ 
+        color: color,
+        shininess: 100
+      });
+      const bar = new THREE.Mesh(barGeometry, material);
+      bar.position.x = (index - 1) * 0.4;
+      bar.position.y = (index - 1) * 0.2;
+      bar.rotation.z = Math.PI / 4;
+      group.add(bar);
+    });
+    
+    return group;
+  };
+  
+  const logo = createThreeJSLogo();
+  scene.add(logo);
+  camera.position.z = 3;
+  
+  function animate() {
+    requestAnimationFrame(animate);
+    logo.rotation.y += 0.01;
+    logo.rotation.x += 0.005;
+    renderer.render(scene, camera);
+  }
+  
+  function handleResize() {
+    const width = container.offsetWidth;
+    const height = container.offsetHeight;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  }
+  
+  window.addEventListener('resize', handleResize);
+  animate();
+});
+</script>
+
+
+        
+
     </div>
   </div>
 </section>
