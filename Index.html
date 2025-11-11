@@ -1039,223 +1039,78 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                 </div>
                 
-                <div class="p-6 flex flex-col flex-grow bg-white bg-opacity-10 backdrop-blur-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
-                            <i class="fas fa-book-reader text-xl text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white">📚 Library Log System</h3>
-                            <p class="text-blue-200 text-sm mt-1">Complete Student Authentication & Tracking</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-blue-100 mb-4 flex-grow leading-relaxed">
-                        A <strong class="text-white">comprehensive library management solution</strong> featuring secure student authentication, 
-                        real-time attendance tracking, and automated personal data retrieval. Built with modern web technologies 
-                        and featuring a stunning glass morphism interface.
-                    </p>
-                    
-                  
-                    <div class="grid grid-cols-2 gap-2 mb-4">
-                        <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
-                            <i class="fas fa-user-plus text-green-400 mr-2 text-sm"></i>
-                            <span class="text-xs">Student Signup</span>
-                        </div>
-                        <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
-                            <i class="fas fa-sign-in-alt text-blue-400 mr-2 text-sm"></i>
-                            <span class="text-xs">Secure Login</span>
-                        </div>
-                        <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
-                            <i class="fas fa-clock text-purple-400 mr-2 text-sm"></i>
-                            <span class="text-xs">Time Tracking</span>
-                        </div>
-                        <div class="flex items-center text-blue-100 bg-white bg-opacity-5 rounded-lg p-2">
-                            <i class="fas fa-chart-bar text-pink-400 mr-2 text-sm"></i>
-                            <span class="text-xs">Live Dashboard</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="flex justify-center space-x-4 mb-4">
-                        <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label active" data-index="0">Login Screen</span>
-                        <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label" data-index="1">Dashboard</span>
-                        <span class="text-xs text-blue-300 bg-blue-900 bg-opacity-50 px-2 py-1 rounded-full carousel-label" data-index="2">Signup Form</span>
-                    </div>
-                    
-                    <div class="mt-auto pt-4 border-t border-white border-opacity-20">
-                        <div class="flex items-center justify-between mb-3">
-                            <p class="text-blue-200 text-sm flex items-center">
-                                <i class="fas fa-layer-group mr-2"></i>
-                                <strong class="text-white">Full Stack: HTML, Tailwind, PHP, MySQL</strong>
-                            </p>
-                            <div class="flex space-x-1">
-                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse" title="Live Demo"></div>
-                                <div class="w-2 h-2 bg-blue-400 rounded-full" title="Database Backend"></div>
-                                <div class="w-2 h-2 bg-purple-400 rounded-full" title="Responsive Design"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex space-x-3">
-                            <a href="#" class="group flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-play-circle mr-2"></i>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="#" class="group w-12 h-12 bg-white bg-opacity-20 text-white font-semibold rounded-xl hover:bg-opacity-30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-code"></i>
-                            </a>
-                            <a href="#" class="group w-12 h-12 bg-white bg-opacity-20 text-white font-semibold rounded-xl hover:bg-opacity-30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-download"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+    <div class="p-6 flex items-center mb-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+            <i class="fas fa-book-reader text-xl text-white"></i>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-gray-800">📚 Library Log System</h3>
+            <p class="text-gray-600 text-sm mt-1">Complete Student Authentication & Tracking</p>
+        </div>
+    </div>
+    
+    <div class="px-6 pb-4 flex flex-col flex-grow">
+        <p class="text-gray-700 mb-4 flex-grow leading-relaxed">
+            A <strong class="text-gray-900">comprehensive library management solution</strong> featuring secure student authentication, 
+            real-time attendance tracking, and automated personal data retrieval. Built with modern web technologies.
+        </p>
+        
+        <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
+            <li>Student registration and authentication</li>
+            <li>Real-time attendance tracking</li>
+            <li>Automated data retrieval</li>
+            <li>Live dashboard with analytics</li>
+            <li>Responsive user interface</li>
+        </ul>
+        
+        <div class="grid grid-cols-2 gap-2 mb-4">
+            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
+                <i class="fas fa-user-plus text-green-500 mr-2 text-sm"></i>
+                <span class="text-xs">Student Signup</span>
+            </div>
+            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
+                <i class="fas fa-sign-in-alt text-blue-500 mr-2 text-sm"></i>
+                <span class="text-xs">Secure Login</span>
+            </div>
+            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
+                <i class="fas fa-clock text-purple-500 mr-2 text-sm"></i>
+                <span class="text-xs">Time Tracking</span>
+            </div>
+            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
+                <i class="fas fa-chart-bar text-pink-500 mr-2 text-sm"></i>
+                <span class="text-xs">Live Dashboard</span>
+            </div>
+        </div>
+        
+        <div class="mt-auto pt-4 border-t border-gray-200">
+            <div class="flex items-center justify-between mb-3">
+                <p class="text-gray-600 text-sm flex items-center">
+                    <i class="fas fa-layer-group mr-2"></i>
+                    <strong class="text-gray-800">Full Stack: HTML, Tailwind, PHP, MySQL</strong>
+                </p>
+                <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
                 </div>
+            </div>
+            
+            <div class="flex space-x-3">
+                <a href="#" class="group flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-play-circle mr-2"></i>
+                    <span>Live Demo</span>
+                </a>
+                <a href="#" class="group w-12 h-12 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="#" class="group w-12 h-12 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-download"></i>
+                </a>
             </div>
         </div>
     </div>
-</section>
-
-<style>
-.glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-
-.carousel-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: scale(1.05);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.carousel-image.active {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.carousel-dot.active {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.carousel-label.active {
-    background: rgba(59, 130, 246, 0.8);
-    color: white;
-}
-
-
-.carousel-prev:hover, .carousel-next:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-}
-
-.animate-float {
-    animation: float 3s ease-in-out infinite;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.carousel-image');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const labels = document.querySelectorAll('.carousel-label');
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
-    
-    let currentIndex = 0;
-    let autoPlayInterval;
-    
-    function showImage(index) {
-      
-        images.forEach(img => {
-            img.classList.remove('active');
-        });
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-            dot.style.opacity = '0.5';
-        });
-        labels.forEach(label => {
-            label.classList.remove('active');
-        });
-        
-    
-        images[index].classList.add('active');
-        dots[index].classList.add('active');
-        dots[index].style.opacity = '1';
-        labels[index].classList.add('active');
-        
-        currentIndex = index;
-    }
-    
-    function nextImage() {
-        let nextIndex = (currentIndex + 1) % images.length;
-        showImage(nextIndex);
-    }
-    
-    function prevImage() {
-        let prevIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(prevIndex);
-    }
-    
-
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextImage, 4000);
-    }
-    
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
-    
-    // Event listeners
-    prevBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevImage();
-        startAutoPlay();
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextImage();
-        startAutoPlay();
-    });
-    
-    dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            stopAutoPlay();
-            const index = parseInt(e.target.getAttribute('data-index'));
-            showImage(index);
-            startAutoPlay();
-        });
-    });
-    
-    labels.forEach(label => {
-        label.addEventListener('click', (e) => {
-            stopAutoPlay();
-            const index = parseInt(e.target.getAttribute('data-index'));
-            showImage(index);
-            startAutoPlay();
-        });
-    });
-    
-  
-    const carousel = document.querySelector('.relative.overflow-hidden');
-    carousel.addEventListener('mouseenter', stopAutoPlay);
-    carousel.addEventListener('mouseleave', startAutoPlay);
-    
-  
-    showImage(0);
-    startAutoPlay();
-});
-</script>
+</div>
         
   <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-6">
