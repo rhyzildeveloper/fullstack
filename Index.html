@@ -1079,32 +1079,47 @@ document.addEventListener('DOMContentLoaded', function() {
                     IT Student & Cybersecurity Enthusiast
                 </p>
             </div>
+<style>
+  .icon-box {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .icon-box:hover {
+    transform: translateY(-6px) scale(1.07);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+  }
+  .icon-box i {
+    transition: transform 0.25s ease;
+  }
+  .icon-box:hover i {
+    transform: scale(1.15);
+  }
+</style>
+
 <div class="flex space-x-4">
   <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/" 
-     class="w-16 h-16 bg-[#1f1f1f] flex items-center justify-center hover:scale-105 transition cursor-pointer">
+     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
     <i class="fab fa-linkedin text-white text-2xl"></i>
   </a>
 
   <!-- Facebook -->
   <a href="https://www.facebook.com/share/1BfJQz1r1R/" 
-     class="w-16 h-16 bg-[#1f1f1f] flex items-center justify-center hover:scale-105 transition cursor-pointer">
+     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
     <i class="fab fa-facebook-f text-white text-2xl"></i>
   </a>
 
   <!-- Gmail -->
   <a href="mailto:rhyzilangelopabadorajimenez@gmail.com" 
-     class="w-16 h-16 bg-[#1f1f1f] flex items-center justify-center hover:scale-105 transition cursor-pointer">
+     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
     <i class="fas fa-envelope text-white text-2xl"></i>
   </a>
 
   <!-- TikTok -->
   <a href="https://www.tiktok.com/@hackyoulater" 
-     class="w-16 h-16 bg-[#1f1f1f] flex items-center justify-center hover:scale-105 transition cursor-pointer">
+     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
     <i class="fab fa-tiktok text-white text-2xl"></i>
   </a>
 </div>
-
 
         <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
             <p>&copy; 2025 Rhyzil Angelo Pabadora Jimenez. All rights reserved.</p>
