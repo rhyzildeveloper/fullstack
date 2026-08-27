@@ -1,1276 +1,2280 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhyzil Angelo Pabadora Jimenez - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3b82f6',
-                        secondary: '#1e40af',
-                        accent: '#10b981'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .certificate-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: #3b82f6;
-            border-radius: 2px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #3b82f6;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 17px;
-            width: 2px;
-            height: calc(100% + 20px);
-            background-color: #e5e7eb;
-        }
-        
-        .timeline-item:last-child::after {
-            display: none;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active-nav::after {
-            width: 100%;
-        }
-        
-        .floating-shape {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .typewriter {
-            overflow: hidden;
-            border-right: .15em solid #3b82f6;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #3b82f6; }
-        }
-        
-        .resume-button {
-            transition: all 0.3s ease;
-        }
-        
-        .resume-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Rhyzil.dev — Cybersecurity, Networking and Web Development Portfolio">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#020617">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+
+<title>RHYZIL.DEV // CYBER PORTFOLIO</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+tailwind.config={
+theme:{
+extend:{
+fontFamily:{
+exo:["Exo","sans-serif"],
+mono:["JetBrains Mono","monospace"]
+}
+}
+}
+}
+</script>
+
+<style>
+
+*{
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+html{
+background:#020617;
+overflow-x:hidden;
+}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Exo,system-ui,sans-serif;
+background:#020617;
+color:#e2e8f0;
+overflow-x:hidden;
+}
+
+/* MAIN MOVING GRID */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-10;
+pointer-events:none;
+
+background-image:
+linear-gradient(rgba(34,211,238,.055) 1px,transparent 1px),
+linear-gradient(90deg,rgba(34,211,238,.055) 1px,transparent 1px);
+
+background-size:50px 50px;
+
+animation:bgScroll 0.92s linear infinite;
+}
+
+@keyframes bgScroll{
+0%{
+background-position:0 0;
+}
+100%{
+background-position:50px 50px;
+}
+}
+
+/* SECOND GRID */
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+z-index:-9;
+pointer-events:none;
+
+background-image:
+linear-gradient(rgba(129,140,248,.025) 1px,transparent 1px),
+linear-gradient(90deg,rgba(129,140,248,.025) 1px,transparent 1px);
+
+background-size:100px 100px;
+
+animation:bgScrollReverse 4s linear infinite;
+}
+
+@keyframes bgScrollReverse{
+0%{
+background-position:100px 100px;
+}
+100%{
+background-position:0 0;
+}
+}
+
+/* MOVING SCANLINES */
+
+.scanlines{
+position:fixed;
+inset:0;
+z-index:80;
+pointer-events:none;
+opacity:.16;
+
+background:
+repeating-linear-gradient(
+to bottom,
+transparent 0px,
+transparent 3px,
+rgba(34,211,238,.025) 4px,
+transparent 5px
+);
+
+animation:scanMove 7s linear infinite;
+}
+
+@keyframes scanMove{
+0%{
+transform:translateY(-10px);
+}
+100%{
+transform:translateY(10px);
+}
+}
+
+/* RADIAL CYBER LIGHT */
+
+.cyber-light{
+position:fixed;
+inset:0;
+z-index:-8;
+pointer-events:none;
+
+background:
+radial-gradient(
+circle at 50% 0%,
+rgba(6,182,212,.13),
+transparent 35%
+),
+radial-gradient(
+circle at 90% 70%,
+rgba(124,58,237,.10),
+transparent 30%
+),
+radial-gradient(
+circle at 10% 80%,
+rgba(217,70,239,.07),
+transparent 30%
+);
+}
+
+/* MOUSE LIGHT */
+
+#mouseGlow{
+position:fixed;
+width:450px;
+height:450px;
+border-radius:50%;
+pointer-events:none;
+z-index:-7;
+
+background:radial-gradient(
+circle,
+rgba(34,211,238,.09),
+rgba(34,211,238,.025) 35%,
+transparent 70%
+);
+
+transform:translate(-50%,-50%);
+transition:left .15s ease-out,top .15s ease-out;
+}
+
+/* FLOATING ORBS */
+
+.orb{
+position:fixed;
+border-radius:50%;
+pointer-events:none;
+z-index:-6;
+filter:blur(80px);
+opacity:.18;
+}
+
+.orb-one{
+width:350px;
+height:350px;
+background:#06b6d4;
+left:-120px;
+top:10%;
+animation:orbOne 13s ease-in-out infinite alternate;
+}
+
+.orb-two{
+width:300px;
+height:300px;
+background:#7c3aed;
+right:-100px;
+top:40%;
+animation:orbTwo 16s ease-in-out infinite alternate;
+}
+
+.orb-three{
+width:280px;
+height:280px;
+background:#db2777;
+left:30%;
+bottom:-100px;
+animation:orbThree 14s ease-in-out infinite alternate;
+}
+
+@keyframes orbOne{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(160px,120px);
+}
+}
+
+@keyframes orbTwo{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(-130px,100px);
+}
+}
+
+@keyframes orbThree{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(100px,-120px);
+}
+}
+
+/* PARTICLES */
+
+.particle{
+position:fixed;
+width:2px;
+height:2px;
+background:#67e8f9;
+border-radius:50%;
+pointer-events:none;
+z-index:-5;
+box-shadow:0 0 10px #22d3ee;
+animation:particleFloat linear infinite;
+}
+
+@keyframes particleFloat{
+0%{
+transform:translateY(110vh) scale(.5);
+opacity:0;
+}
+10%{
+opacity:.7;
+}
+90%{
+opacity:.7;
+}
+100%{
+transform:translateY(-10vh) scale(1.2);
+opacity:0;
+}
+}
+
+/* GLASS */
+
+.glass{
+background:rgba(2,8,23,.66);
+border:1px solid rgba(103,232,249,.11);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+transition:
+transform .35s ease,
+border-color .35s ease,
+box-shadow .35s ease;
+}
+
+.glass:hover{
+transform:translateY(-5px);
+border-color:rgba(34,211,238,.3);
+box-shadow:
+0 20px 60px rgba(0,0,0,.25),
+0 0 35px rgba(34,211,238,.07);
+}
+
+/* GRADIENT TEXT */
+
+.gradient-text{
+background:
+linear-gradient(
+90deg,
+#67e8f9,
+#22d3ee,
+#818cf8,
+#e879f9,
+#67e8f9
+);
+
+background-size:300% auto;
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+
+animation:gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove{
+to{
+background-position:300% center;
+}
+}
+
+/* HERO GLOW */
+
+.hero-glow{
+text-shadow:
+0 0 20px rgba(34,211,238,.25),
+0 0 60px rgba(34,211,238,.12);
+}
+
+/* ROTATING RINGS */
+
+.ring{
+border-radius:50%;
+border:1px solid rgba(34,211,238,.12);
+animation:ringRotate 20s linear infinite;
+}
+
+.ring.reverse{
+animation-direction:reverse;
+animation-duration:13s;
+}
+
+@keyframes ringRotate{
+to{
+transform:rotate(360deg);
+}
+}
+
+/* STATUS PULSE */
+
+.status-dot{
+animation:statusPulse 1.7s infinite;
+}
+
+@keyframes statusPulse{
+0%,100%{
+box-shadow:0 0 0 rgba(52,211,153,0);
+}
+50%{
+box-shadow:0 0 18px rgba(52,211,153,.8);
+}
+}
+
+/* FLOAT */
+
+.float{
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+}
+
+/* REVEAL */
+
+.reveal{
+opacity:0;
+transform:translateY(35px);
+transition:
+opacity .8s ease,
+transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SKILL */
+
+.skill-bar{
+width:0;
+transition:width 1.5s cubic-bezier(.22,1,.36,1);
+}
+
+/* BUTTON */
+
+.cyber-button{
+position:relative;
+overflow:hidden;
+}
+
+.cyber-button::before{
+content:"";
+position:absolute;
+left:-100%;
+top:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+transition:.5s;
+}
+
+.cyber-button:hover::before{
+left:100%;
+}
+
+/* NAV ACTIVE */
+
+.nav-link{
+position:relative;
+}
+
+.nav-link::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-7px;
+width:0;
+height:2px;
+background:#22d3ee;
+box-shadow:0 0 10px #22d3ee;
+transition:.3s;
+}
+
+.nav-link.active{
+color:#67e8f9;
+}
+
+.nav-link.active::after{
+width:100%;
+}
+
+/* FILTER */
+
+.filter-active{
+background:#0891b2!important;
+border-color:#22d3ee!important;
+color:white!important;
+box-shadow:0 0 20px rgba(34,211,238,.15);
+}
+
+/* TERMINAL */
+
+.terminal-cursor{
+display:inline-block;
+width:8px;
+height:1.1em;
+background:#22d3ee;
+margin-left:4px;
+vertical-align:middle;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:0;
+}
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:7px;
+}
+
+::-webkit-scrollbar-track{
+background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+background:#155e75;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#0891b2;
+}
+
+/* SELECTION */
+
+::selection{
+background:#22d3ee;
+color:#020617;
+}
+
+/* MOBILE */
+
+@media(max-width:640px){
+
+body::before{
+background-size:35px 35px;
+animation-duration:1.3s;
+}
+
+body::after{
+background-size:70px 70px;
+}
+
+#mouseGlow{
+display:none;
+}
+
+.orb{
+filter:blur(65px);
+opacity:.12;
+}
+
+.hero-title{
+font-size:clamp(3rem,16vw,5rem);
+}
+
+.glass:hover{
+transform:none;
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+*,
+*::before,
+*::after{
+animation-duration:.001ms!important;
+animation-iteration-count:1!important;
+scroll-behavior:auto!important;
+transition-duration:.001ms!important;
+}
+
+}
+
+</style>
 </head>
-<body class="bg-gray-50">
-   <nav class="fixed w-full bg-white shadow-md z-50">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex flex-col items-center gap-1">
-  <img
-    "
-    alt="Verified badge"
-    class="w-7 h-7"
-  />
 
-  <div class="text-2xl font-bold text-primary leading-none">
-    Rhyzil<span class="text-secondary">.dev</span>
-  </div>
-</div>
+<body>
 
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link active-nav text-gray-700 hover:text-primary transition">Home</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a>
-                <a href="#education" class="nav-link text-gray-700 hover:text-primary transition">Education</a>
-                <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition">Certifications</a>
-                <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition">Projects</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
-        <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
-        <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
-        <a href="#education" class="block py-2 text-gray-700 hover:text-primary transition">Education</a>
-        <a href="#certifications" class="block py-2 text-gray-700 hover:text-primary transition">Certifications</a>
-        <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition">Projects</a>
-    </div>
+<div class="scanlines"></div>
+<div class="cyber-light"></div>
+<div id="mouseGlow"></div>
+
+<div class="orb orb-one"></div>
+<div class="orb orb-two"></div>
+<div class="orb orb-three"></div>
+
+<div id="particles"></div>
+
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-cyan-400/10 bg-slate-950/75 backdrop-blur-xl">
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="h-20 flex items-center justify-between">
+
+<a href="#home" class="font-mono font-bold text-xl sm:text-2xl tracking-tight">
+<span class="text-cyan-400">RHYZIL</span><span class="text-white">.DEV</span>
+</a>
+
+<nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm text-slate-400">
+
+<a class="nav-link active hover:text-cyan-300 transition" href="#home">Home</a>
+<a class="nav-link hover:text-cyan-300 transition" href="#about">About</a>
+<a class="nav-link hover:text-cyan-300 transition" href="#skills">Skills</a>
+<a class="nav-link hover:text-cyan-300 transition" href="#certifications">Certifications</a>
+<a class="nav-link hover:text-cyan-300 transition" href="#projects">Projects</a>
+<a class="nav-link hover:text-cyan-300 transition" href="#contact">Contact</a>
+
 </nav>
 
-   <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 to-indigo-100">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between">           
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                    Hi, I'm <span class="text-primary">Rhyzil Angelo Pabadora Jimenez</span>
-                </h1>
-                
-                <div class="typewriter text-xl md:text-2xl text-gray-600 mb-6">
-                    IT Student & Cybersecurity Enthusiast
-                </div>
-                
-                <p class="text-gray-600 mb-8 leading-relaxed">
-                    3rd Year Bachelor of Science in Information Technology student with growing expertise in 
-                    cybersecurity, networking, and web development.
-                </p>
-                
-                <div class="flex space-x-4">
-                    <a href="#certifications" class="bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:bg-secondary transition">
-                        View Certifications
-                    </a>
-                    <a href="#about" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-                        Learn More
-                    </a>
-                    <button onclick="downloadResume()" class="resume-button bg-accent text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition flex items-center">
-                        <i class="fas fa-download mr-2"></i> Download Resume
-                    </button>
-                </div>
-            </div>
-           
-            <div class="md:w-2/5 relative">
-                <div class="bg-white p-2 rounded-2xl shadow-xl">
-                    <img 
-                      src="https://wallpaperaccess.com/full/1500694.jpg" 
-                      alt="Profile Picture" 
-                      class="rounded-2xl w-full max-w-sm mx-auto"
-                      loading="lazy"
-                    />
-                </div>
-                
-                <div class="absolute -top-4 -right-4 bg-accent text-white p-4 rounded-lg shadow-lg floating-shape">
-                    <i class="fas fa-shield-alt text-2xl"></i>
-                </div>
-                
-                <div class="absolute -bottom-4 -left-4 bg-primary text-white p-4 rounded-lg shadow-lg floating-shape" style="animation-delay: 2s;">
-                    <i class="fas fa-laptop-code text-2xl"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<button
+id="mobileBtn"
+type="button"
+aria-label="Open navigation"
+class="md:hidden w-11 h-11 rounded-xl glass text-cyan-300">
 
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 section-title">About Me</h2>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <p class="text-gray-600 mb-4">I am Rhyzil Angelo Pabadora Jimenez, an IT Student with a strong foundation in cybersecurity, networking, and software development. I'm passionate about protecting digital assets and creating secure, efficient technology solutions.</p>
-                    <p class="text-gray-600 mb-4">I live in Crossing Otabon, Tabango, Leyte, where I've developed my skills through both formal education and hands-on experience with industry-leading technologies.</p>
-                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-primary">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Skills</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Cybersecurity</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Network Security</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Html</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Css</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Tailwind Css</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">JavaScript</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">PHP</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Microsoft Entra ID</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Identity Management</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">IoT</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm shadow-sm">Ethical Hacking</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal Details</h3>
-                        <div class="space-y-3">
-                            <div class="flex">
-                                <div class="w-1/3 font-medium text-gray-700">Full Name:</div>
-                                <div class="w-2/3 text-gray-600">Rhyzil Angelo Pabadora Jimenez</div>
-                            </div>
-                            <div class="flex">
-                                <div class="w-1/3 font-medium text-gray-700">Location:</div>
-                                <div class="w-2/3 text-gray-600">Crossing Otabon, Tabango, Leyte</div>
-                            </div>
-                            <div class="flex">
-                                <div class="w-1/3 font-medium text-gray-700">Education:</div>
-                                <div class="w-2/3 text-gray-600">BS in Information Technology</div>
-                            </div>
-                            <div class="flex">
-                                <div class="w-1/3 font-medium text-gray-700">Interests:</div>
-                                <div class="w-2/3 text-gray-600">Cybersecurity, Web Development, IoT</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<i class="fa-solid fa-bars"></i>
 
-    <section id="education" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 section-title">Education & Training</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Formal Education</h3>
-                    <div class="space-y-6">
-                        <div class="timeline-item">
-                            <h4 class="font-semibold text-gray-800">Bachelor of Science in Information Technology (BSIT)</h4>
-                            <p class="text-gray-600">Palompon Institute of Technology - Tabango</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4 class="font-semibold text-gray-800">Shielded Metal Arc Welding (SMAW)</h4>
-                            <p class="text-gray-600">Technical Vocational Education</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4 class="font-semibold text-gray-800">High School</h4>
-                            <p class="text-gray-600">Marcelino R. Veloso National High School</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4 class="font-semibold text-gray-800">Elementary</h4>
-                            <p class="text-gray-600">Tabango Central School</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Specialized Training</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-primary rounded-full p-2 mt-1 mr-4">
-                                <i class="fas fa-graduation-cap text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Cisco Networking Academy</h4>
-                                <p class="text-gray-600">Completed multiple cybersecurity and networking courses</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-secondary rounded-full p-2 mt-1 mr-4">
-                                <i class="fab fa-microsoft text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Microsoft Learn</h4>
-                                <p class="text-gray-600">Completed identity and security-related certifications</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-accent rounded-full p-2 mt-1 mr-4">
-                                <i class="fas fa-code text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Web Development</h4>
-                                <p class="text-gray-600">JavaScript Essentials and modern web technologies</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-  </div>
-<section id="blog" class="bg-gray-900 text-white py-16">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-12 text-center">
-      Latest <span class="text-primary">Blog Posts</span>
-    </h2>
+</button>
 
-    <div class="grid md:grid-cols-3 gap-8">
-
-     <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-    <img src="data:image/jpeg;base64,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"
-         alt="Front-End Project" loading="lazy"
-         class="w-full h-48 object-cover object-center">
-    <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-xl font-semibold mb-2">How I Built My First Front-End Project</h3>
-        <p class="text-gray-400 mb-4 flex-grow">
-            A breakdown of my journey creating a responsive website using HTML, Tailwind CSS, and JavaScript.
-        </p>
-        <button onclick="openModal()" class="text-primary font-semibold hover:underline mt-auto cursor-pointer">Read More →</button>
-    </div>
 </div>
 
-<div id="portfolioModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-gray-800 rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto">
-        <div class="sticky top-0 bg-gray-800 px-6 py-4 border-b border-gray-700 flex justify-between items-center">
-            <h2 class="text-2xl font-bold">From Concept to Creation: Building My Digital Home</h2>
-            <button onclick="closeModal()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
-        </div>
-        
-        <div class="p-6 space-y-6">
-            <div class="prose prose-invert max-w-none">
-                <p class="text-lg text-gray-300 mb-6">
-                    Ever since I embarked on my web development journey, I envisioned creating a digital space that truly represents my skills and passion a portfolio that not only showcases my projects but also demonstrates the technical expertise I've cultivated. This website stands as the realization of that vision, meticulously crafted from the ground up with an emphasis on modern design, clean aesthetics, and seamless responsiveness.
-                </p>
+<div id="mobileMenu" class="hidden md:hidden pb-4">
 
-                <div class="bg-gray-700 rounded-lg p-6 mb-6">
-                    <h3 class="text-xl font-semibold mb-4 text-white">The Tech Stack</h3>
-                    <div class="grid md:grid-cols-3 gap-4">
-                        <div class="bg-gray-600 p-4 rounded-lg">
-                            <h4 class="font-semibold text-primary mb-2">🛠️ HTML5</h4>
-                            <p class="text-gray-300 text-sm">Clean, semantic structure for accessibility and SEO</p>
-                        </div>
-                        <div class="bg-gray-600 p-4 rounded-lg">
-                            <h4 class="font-semibold text-primary mb-2">Tailwind CSS</h4>
-                            <p class="text-gray-300 text-sm">Utility-first styling for rapid responsive design</p>
-                        </div>
-                        <div class="bg-gray-600 p-4 rounded-lg">
-                            <h4 class="font-semibold text-primary mb-2">JavaScript</h4>
-                            <p class="text-gray-300 text-sm">Lightweight interactivity and dynamic features</p>
-                        </div>
-                    </div>
-                </div>
+<div class="glass rounded-2xl p-3 grid gap-1">
 
-                <div class="space-y-8">
-                   <div>
-    <h3 class="text-xl font-semibold mb-3 text-white">1. The Foundation: Semantic HTML</h3>
-    <p class="text-gray-300">
-        The journey began with a solid structural foundation. I implemented clean, semantic HTML to ensure the website's architecture is logical, accessible, and search-engine friendly. Every <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;article&gt;</code> element was deliberately chosen to create a robust and meaningful user experience that both humans and machines can easily navigate.
-    </p>
+<a href="#home" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">Home</a>
+<a href="#about" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">About</a>
+<a href="#skills" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">Skills</a>
+<a href="#certifications" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">Certifications</a>
+<a href="#projects" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">Projects</a>
+<a href="#contact" class="mobile-link px-4 py-3 rounded-xl hover:bg-cyan-400/10">Contact</a>
+
 </div>
 
-
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3 text-white">2. Styling with Speed & Precision: Tailwind CSS</h3>
-                        <p class="text-gray-300">
-                          Rather than writing extensive custom CSS, I embraced Tailwind CSS's utility-first methodology. This approach enabled me to style components directly within the HTML with exceptional efficiency and consistency. Creating a fully responsive design became intuitive leveraging Tailwind's breakpoint prefixes, I developed a layout that performs beautifully across all devices, from large desktop displays to mobile smartphones.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3 text-white">3. Bringing it to Life: Vanilla JavaScript</h3>
-                        <p class="text-gray-300">
-                          To infuse the site with interactivity and polish, I utilized vanilla JavaScript—opting for pure, focused code without heavy frameworks. This is where the real magic unfolds: smooth scroll-based navigation updates, dynamic content filtering for project organization, and subtle animations that breathe life into the user interface, creating an engaging and memorable browsing experience.
-                        </p>
-                    </div>
-
-                    <div class="bg-gray-700 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-white">The Result: A Performance-First Portfolio</h3>
-                        <p class="text-gray-300">
-                           By strategically combining these technologies, I've engineered a website that not only reflects my capabilities but also delivers exceptional speed, accessibility, and user satisfaction. This project served as a profound learning opportunity, reinforcing my mastery of the core front-end technologies and underscoring the critical importance of a mobile-first development approach.
-                        </p>
-                        <p class="text-gray-300 mt-3">
-                            This portfolio remains an evolving project, continuously refined and enhanced as I grow in my development journey. Thank you for visiting and exploring my work!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<script>
-function openModal() {
-    document.getElementById('portfolioModal').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
+</div>
+</header>
 
-function closeModal() {
-    document.getElementById('portfolioModal').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
+<main>
 
-document.getElementById('portfolioModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
-    }
-});
-</script>
+<section id="home" class="min-h-screen flex items-center pt-28 sm:pt-32 pb-16 relative">
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
-             alt="Cybersecurity Basics" loading="lazy"
-             class="w-full h-48 object-cover object-center">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of Cybersecurity</h3>
-          <p class="text-gray-400 mb-4 flex-grow">
-            Learn the fundamental concepts of cybersecurity and how to protect your personal information.
-          </p>
-          <a href="https://www.adelaideuni.edu.au/study/online/"
-             class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">Read More →</a>
-        </div>
-      </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
+<div class="grid lg:grid-cols-[1.15fr_.85fr] gap-12 lg:gap-20 items-center">
 
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png"
-             alt="HTML5 Logo" loading="lazy"
-             class="w-full h-48 object-contain bg-white p-6 rounded-t-2xl">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Learn the Fundamentals of HTML</h3>
-          <p class="text-gray-400 mb-4 flex-grow">
-            Discover the building blocks of the web with HTML. Learn how to structure web pages using tags and semantic elements.
-          </p>
-          <a href="https://en.wikipedia.org/wiki/HTML"
-             class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">Read More →</a>
-        </div>
-      </div>
-        
-      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="data:image/jpeg;base64,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" alt="Mastering Tailwind CSS" loading="lazy"
-             class="w-full h-48 object-cover object-center">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Mastering Tailwind CSS</h3>
-          <p class="text-gray-400 mb-4 flex-grow">
-            My top tips and tricks for building modern, beautiful interfaces faster with Tailwind CSS.
-          </p>
-          <a href="https://tailwindcss.com/"
-             class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">Read More →</a>
-        </div>
-      </div>
+<div class="reveal">
 
-        <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-  <img src="data:image/png;base64,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" 
-       alt="JavaScript Logo" class="w-full h-48 object-cover object-center" loading="lazy">
-  <div class="p-6 flex flex-col flex-grow">
-    <h3 class="text-xl font-semibold mb-2">Learn JavaScript</h3>
-    <p class="text-gray-400 mb-4 flex-grow">
-      Dive into JavaScript – the language of the web. Learn about its history, features, and modern uses.
-    </p>
-    <a href="https://en.wikipedia.org/wiki/JavaScript"
-       class="text-primary font-semibold hover:underline mt-auto"
-       target="_blank" rel="noopener noreferrer">Read More →</a>
-  </div>
+<div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-full glass font-mono text-[10px] sm:text-xs mb-7">
+
+<span class="status-dot w-2 h-2 rounded-full bg-emerald-400"></span>
+
+<span class="text-emerald-300">SYSTEM ONLINE</span>
+
+<span class="text-slate-600">/</span>
+
+<span class="text-slate-400">SECURE PORTFOLIO</span>
+
 </div>
 
+<p class="font-mono text-cyan-400 text-xs sm:text-sm mb-4">
+01 // IDENTITY INITIALIZED
+</p>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYlC9coY7UOOE5O3Qvn7EKLBSvT4gzzUzqw&s="
-             alt="PHP Logo" loading="lazy"
-             class="w-full h-48 object-cover object-center">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Getting Started with PHP</h3>
-          <p class="text-gray-400 mb-4 flex-grow">
-            Learn the basics of PHP — a powerful scripting language that drives most of the modern web.
-          </p>
-          <a href="https://en.m.wikipedia.org/wiki/PHP"
-             class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">Read More →</a>
-        </div>
-      </div>
+<h1 class="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[.9] hero-glow">
 
+Hi, I'm<br>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-        <img src="data:image/png;base64,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" 
-             alt="Laravel Logo" loading="lazy"
-             class="w-full h-48 object-cover object-center">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Exploring Laravel</h3>
-          <p class="text-gray-400 mb-4 flex-grow">
-            Discover Laravel — a modern PHP framework for elegant web development.
-          </p>
-          <a href="https://laravel.com/"
-             class="text-primary font-semibold hover:underline mt-auto"
-             target="_blank" rel="noopener noreferrer">Read More →</a>
-        </div>
-      </div>
+<span class="gradient-text">Rhyzil</span><span class="text-white">.</span>
 
+</h1>
 
-        <div id="threejs-card" class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-transform hover:-translate-y-1 flex flex-col">
-  <div id="canvas-container" class="w-full h-48 relative">
-    <canvas id="threejs-canvas" class="w-full h-full"></canvas>
-  </div>
-  
-  <div class="p-6 flex flex-col flex-grow">
-    <h3 class="text-xl font-semibold mb-2 text-white">Mastering Three.js</h3>
-    <p class="text-gray-400 mb-4 flex-grow">
-      My top tips and tricks for building immersive 3D experiences and interactive web graphics with Three.js.
-    </p>
-    <a href="https://threejs.org/"
-       class="text-blue-400 font-semibold hover:underline mt-auto"
-       target="_blank" rel="noopener noreferrer">Read More →</a>
-  </div>
+<div class="mt-7 text-lg sm:text-xl md:text-2xl font-mono text-slate-300 min-h-8">
+
+<span id="typewriter"></span>
+<span class="terminal-cursor"></span>
+
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const container = document.getElementById('canvas-container');
-  const canvas = document.getElementById('threejs-canvas');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-  
-  renderer.setSize(container.offsetWidth, container.offsetHeight);
-  renderer.setClearColor(0x000000, 0);
-  
-  const ambientLight = new THREE.AmbientLight(0x404040, 2);
-  scene.add(ambientLight);
-  
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(1, 1, 1);
-  scene.add(directionalLight);
-  
-  const createThreeJSLogo = () => {
-    const group = new THREE.Group();
-    const colors = [0x049EF4, 0xFF0000, 0xFFFFFF];
-    const barGeometry = new THREE.BoxGeometry(0.3, 1.5, 0.1);
-    
-    colors.forEach((color, index) => {
-      const material = new THREE.MeshPhongMaterial({ 
-        color: color,
-        shininess: 100
-      });
-      const bar = new THREE.Mesh(barGeometry, material);
-      bar.position.x = (index - 1) * 0.4;
-      bar.position.y = (index - 1) * 0.2;
-      bar.rotation.z = Math.PI / 4;
-      group.add(bar);
-    });
-    
-    return group;
-  };
-  
-  const logo = createThreeJSLogo();
-  scene.add(logo);
-  camera.position.z = 3;
-  
-  function animate() {
-    requestAnimationFrame(animate);
-    logo.rotation.y += 0.01;
-    logo.rotation.x += 0.005;
-    renderer.render(scene, camera);
-  }
-  
-  function handleResize() {
-    const width = container.offsetWidth;
-    const height = container.offsetHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  }
-  
-  window.addEventListener('resize', handleResize);
-  animate();
-});
-</script>
+<p class="mt-6 sm:mt-7 max-w-2xl text-slate-400 leading-7 sm:leading-8 text-base sm:text-lg">
 
+IT student focused on cybersecurity, networking, web development and building modern technology solutions.
 
-        
+</p>
 
-    </div>
-  </div>
-</section>
+<div class="mt-8 flex flex-col xs:flex-row sm:flex-row gap-3 sm:gap-4">
 
-    
-  </div>
-</section>
+<a
+href="#projects"
+class="cyber-button px-6 py-3.5 rounded-xl bg-cyan-500 text-slate-950 font-bold text-center hover:bg-cyan-300 transition">
+
+Explore Projects
+<i class="fa-solid fa-arrow-right ml-2"></i>
+
+</a>
+
+<a
+href="#certifications"
+class="px-6 py-3.5 rounded-xl glass font-semibold text-cyan-200 text-center hover:bg-cyan-400/10 transition">
+
+View Certifications
+
+</a>
+
+</div>
+
+<div class="mt-9 grid grid-cols-1 xs:grid-cols-3 gap-2 sm:gap-3">
+
+<div class="glass px-3 py-3 rounded-xl font-mono text-[10px] sm:text-xs">
+<span class="text-cyan-400">01</span> CYBERSECURITY
+</div>
+
+<div class="glass px-3 py-3 rounded-xl font-mono text-[10px] sm:text-xs">
+<span class="text-violet-400">02</span> NETWORKING
+</div>
+
+<div class="glass px-3 py-3 rounded-xl font-mono text-[10px] sm:text-xs">
+<span class="text-fuchsia-400">03</span> WEB DEV
+</div>
+
+</div>
+
+</div>
+
+<div class="relative flex justify-center reveal">
+
+<div class="absolute w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full ring"></div>
+
+<div class="absolute w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full ring reverse"></div>
+
+<div class="relative float w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-[2rem] glass flex items-center justify-center overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-violet-500/10"></div>
+
+<div class="absolute top-4 left-4 font-mono text-[9px] text-cyan-400/50">
+RZL-01
+</div>
+
+<div class="absolute bottom-4 right-4 font-mono text-[9px] text-violet-400/50">
+SECURE
+</div>
+
+<div class="relative text-center">
+
+<div class="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 mx-auto rounded-full border border-cyan-300/30 bg-slate-950 flex items-center justify-center shadow-[0_0_60px_rgba(34,211,238,.15)]">
+
+<i class="fa-solid fa-user-secret text-5xl sm:text-6xl md:text-7xl text-cyan-300"></i>
+
+</div>
+
+<div class="mt-5 font-mono text-[10px] text-slate-500">
+IDENTITY VERIFIED
+</div>
+
+<div class="text-emerald-400 font-mono text-xs mt-1">
+● ACTIVE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-    <section id="certifications" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 section-title">Certifications</h2>
-            <p class="text-gray-600 mb-8">I have completed various certifications from leading technology providers to enhance my skills in cybersecurity, networking, and IT management.</p>
-            
-            <div class="flex flex-col items-center justify-center mb-12">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-network-wired text-green-600 mr-3"></i> 
-                    𝙄𝙉𝙏𝙀𝙉𝙏 𝘾𝙊𝘿𝙀 𝙈𝘼𝙎𝙏𝙀𝙍𝙎 2025
-                </h3>
-                <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden w-full max-w-md">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <i class="fas fa-award text-3xl text-blue-600"></i>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Participation</span>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-2">Certificate of Participation</h4>
-                        <p class="text-gray-600 text-sm mb-2">Awarded to participants of</p>
-                        <p class="font-medium text-gray-700 text-sm mb-4">
-                            Intent Code Masters 2025<br>
-                            Coding Competition (Java Category)
-                        </p>
-                        <p class="text-gray-600 text-sm mb-4">Palompon Institute of Technology - Tabango Campus</p>
-                        <div class="text-xs text-gray-500">February 14, 2024</div>
-                    </div>
-                </div>
-            </div>
+<section id="about" class="py-20 sm:py-28">
 
-            <div class="mb-10">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
-                    <i class="fab fa-microsoft text-primary mr-3"></i> Microsoft Certifications
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Create, configure, and manage identities</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Describe application-based threats and protection</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Authentication and authorization in cybersecurity</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Basic cybersecurity threats, attacks, and mitigations</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Concepts of cryptography</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Device-based threats and security controls</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Network-based threats and mitigations</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Authentication capabilities of Microsoft Entra ID</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fab fa-microsoft text-3xl text-blue-600"></i>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Function and identity types of Microsoft Entra ID</h4>
-                            <p class="text-gray-600 text-sm mb-4">Microsoft</p>
-                            <div class="text-xs text-gray-500">September 23, 2025</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-network-wired text-green-600 mr-3"></i> Cisco Certifications
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Ethical Hacker</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 19, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Introduction to Cybersecurity</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 19, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-network-wired text-3xl text-green-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Introduction to IoT and Digital Transformation</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 20, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-code text-3xl text-blue-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">HTML Essentials</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 19, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-code text-3xl text-blue-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">CSS Essentials</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 25, 2025</div>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-card bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-4">
-                                <i class="fas fa-code text-3xl text-blue-600"></i>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Completed</span>
-                            </div>
-                            <h4 class="font-semibold text-gray-800 mb-2">JavaScript Essentials</h4>
-                            <p class="text-gray-600 text-sm mb-4">Cisco Networking Academy</p>
-                            <div class="text-xs text-gray-500">September 25, 2025</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-<section id="projects" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-800 section-title mb-12">Projects</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-           
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-                <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/590415209_1563406938337799_1614991109718700734_n.png?stp=dst-png_s843x403&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGbw48koMD0G6Mt68zh971kPhamtEv-FqQ-Fqa0S_4WpFwBusH6Y9rNBmIJbVf0SIvY1tME6Sjr7bXXtJ8unHDO&_nc_ohc=q3soTHbtoj8Q7kNvwGaRsYQ&_nc_oc=AdkQSgocjKKgJtMFitujrCLGfEN5RhQYWongNL4n8iNNHEWoA6qazNx81Qt21RBlV2cBfzkukaEAFo7IPb5BBjQZ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&oh=03_Q7cD3wGswp2Hvy4PHdpPkeIo_2dbOugDE9a4QL0JGMeIu506Kg&oe=6950E541" 
-                     alt="Portfolio Website Project" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🌐 Rhyzil.Dev Portfolio</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">
-                        I designed and developed my personal portfolio website using <strong>HTML5, Tailwind CSS, and Font Awesome</strong>, with smooth animations and responsive layouts. 
-                        The site highlights my journey as a BSIT student specializing in cybersecurity, networking, and web development.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-                        <li>Responsive design for all devices</li>
-                        <li>Smooth scrolling & interactive navigation</li>
-                        <li>Typewriter animation for title</li>
-                        <li>Floating shape effects</li>
-                        <li>Showcase of certifications (Microsoft & Cisco)</li>
-                        <li>Quick contact links to LinkedIn, Facebook, and Email</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-gray-600 text-sm mb-3">🛠 Tech Stack: HTML, Tailwind CSS, JavaScript, Font Awesome, Google Fonts</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            View Project <span class="ml-1">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<div class="reveal mb-10 sm:mb-12">
 
-           
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-                <img src="data:image/png;base64,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" 
-                     alt="Age Calculator Project" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🧮 Age Calculator</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">
-                        I designed and developed an <strong>Age Calculator Application</strong> using HTML, Tailwind CSS, and JavaScript. 
-                        The app allows users to enter their birth date and instantly calculates their exact age in years, months, and days. 
-                        It also provides extra details such as the day they were born, their birthstone, and zodiac sign.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-                        <li>Real-time age calculation</li>
-                        <li>Day of the week display</li>
-                        <li>Birthstone information</li>
-                        <li>Zodiac sign identification</li>
-                        <li>Responsive and user-friendly interface</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-gray-600 text-sm mb-3">🛠 Tech Stack: HTML, Tailwind CSS, JavaScript</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            View Project <span class="ml-1">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<p class="font-mono text-cyan-400 text-xs sm:text-sm">
+02 // PROFILE
+</p>
 
-           
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzhgZjnNLFI_j8cUM0FyLrHJk4VWEaaIOAVFrbgYz1Qw&s=10" 
-                     alt="Front-End Project" 
-                     class="w-full h-48 object-cover object-center">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Modern Front-End Project</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">
-                        I built this project using <strong>HTML</strong>, <strong>Tailwind CSS</strong>, and <strong>JavaScript</strong>.  
-                        It focuses on responsive design and clean UI components.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-                        <li>Responsive design implementation</li>
-                        <li>Clean UI components</li>
-                        <li>Modern front-end practices</li>
-                        <li>Cross-browser compatibility</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-gray-600 text-sm mb-3">🛠 Tech Stack: HTML, Tailwind CSS, JavaScript</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            View Project <span class="ml-1">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<h2 class="text-4xl sm:text-5xl font-extrabold mt-3">
+About <span class="gradient-text">Me</span>
+</h2>
 
-          
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-                <img src="https://cdn.dribbble.com/userupload/4442639/file/original-1ca1079186b84a7c01e54e0dacddd426.png?resize=1024x768&vertical=center" 
-                     alt="Client Billing & Invoice Generator Web App" 
-                     class="w-full h-48 object-cover object-top">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Client Billing & Invoice Generator Web App</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">
-                        This web app allows users to generate professional invoices and manage client billing seamlessly. Built using 
-                        <strong>PHP</strong>, <strong>MySQL</strong>, <strong>HTML</strong>, <strong>Tailwind CSS</strong>, and <strong>JavaScript</strong>, it emphasizes security, usability, and automation.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-                        <li>User authentication with role-based access control</li>
-                        <li>Create and send invoices to clients with automatic numbering</li>
-                        <li>Automated calculation of totals and financial reporting</li>
-                        <li>Secure client data management with PDO protection</li>
-                        <li>Multi-currency support and invoice status tracking</li>
-                        <li>Responsive dashboard with financial analytics</li>
-                        <li>Session-based security and password encryption</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-gray-600 text-sm mb-3">🛠 Tech Stack: PHP, MySQL, HTML, Tailwind CSS, JavaScript</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            View Project <span class="ml-1">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-                <img src="https://scontent.fcgy2-2.fna.fbcdn.net/v/t1.15752-9/577206831_807328662211835_6234373942382472286_n.png?stp=dst-png_s843x403&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=KTjdGAZEVG4Q7kNvwEVsb2Y&_nc_oc=Adkowj2PfaGLNZOvuIrVuoMeA8fAcWQpQUCaTOSfOKCPmiwNs71yJI6xL6dv0mgUVlI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&oh=03_Q7cD3wEMhIf6fNaorniURgpTRtIhaHxwIEQ9bbm2pEqufvZUbg&oe=6938EB41" 
-                     alt="Visitor Log System" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📋 Visitor Log System</h3>
-                    <p class="text-gray-600 mb-4 flex-grow">
-                        I designed and developed a <strong>Visitor Log System</strong> using HTML, Tailwind CSS, and PHP. 
-                        The system allows organizations to track visitors with details like name, contact information, purpose of visit, 
-                        check-in/check-out times, and host information. It features search functionality and real-time data management.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-                        <li>Visitor registration and check-in</li>
-                        <li>Advanced search functionality</li>
-                        <li>Real-time data management</li>
-                        <li>Check-out functionality</li>
-                        <li>Responsive and user-friendly interface</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <p class="text-gray-600 text-sm mb-3">🛠 Tech Stack: HTML, Tailwind CSS, PHP</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline inline-flex items-center">
-                            View Project <span class="ml-1">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-    <div class="p-6 flex items-center mb-4">
-        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
-            <i class="fas fa-book-reader text-xl text-white"></i>
-        </div>
-        <div>
-            <h3 class="text-2xl font-bold text-gray-800">📚 Library Log System</h3>
-            <p class="text-gray-600 text-sm mt-1">Complete Student Authentication & Tracking</p>
-        </div>
-    </div>
-    
-    <div class="px-6 pb-4 flex flex-col flex-grow">
-        <p class="text-gray-700 mb-4 flex-grow leading-relaxed">
-            A <strong class="text-gray-900">comprehensive library management solution</strong> featuring secure student authentication, 
-            real-time attendance tracking, and automated personal data retrieval. Built with modern web technologies.
-        </p>
-        
-        <ul class="list-disc list-inside text-gray-600 text-sm mb-4 space-y-1">
-            <li>Student registration and authentication</li>
-            <li>Real-time attendance tracking</li>
-            <li>Automated data retrieval</li>
-            <li>Live dashboard with analytics</li>
-            <li>Responsive user interface</li>
-        </ul>
-        
-        <div class="grid grid-cols-2 gap-2 mb-4">
-            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
-                <i class="fas fa-user-plus text-green-500 mr-2 text-sm"></i>
-                <span class="text-xs">Student Signup</span>
-            </div>
-            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
-                <i class="fas fa-sign-in-alt text-blue-500 mr-2 text-sm"></i>
-                <span class="text-xs">Secure Login</span>
-            </div>
-            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
-                <i class="fas fa-clock text-purple-500 mr-2 text-sm"></i>
-                <span class="text-xs">Time Tracking</span>
-            </div>
-            <div class="flex items-center text-gray-700 bg-gray-100 rounded-lg p-2">
-                <i class="fas fa-chart-bar text-pink-500 mr-2 text-sm"></i>
-                <span class="text-xs">Live Dashboard</span>
-            </div>
-        </div>
-        
-        <div class="mt-auto pt-4 border-t border-gray-200">
-            <div class="flex items-center justify-between mb-3">
-                <p class="text-gray-600 text-sm flex items-center">
-                    <i class="fas fa-layer-group mr-2"></i>
-                    <strong class="text-gray-800">Full Stack: HTML, Tailwind, PHP, MySQL</strong>
-                </p>
-                <div class="flex space-x-1">
-                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                </div>
-            </div>
-            
-            <div class="flex space-x-3">
-                <a href="#" class="group flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-play-circle mr-2"></i>
-                    <span>Live Demo</span>
-                </a>
-                <a href="#" class="group w-12 h-12 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-code"></i>
-                </a>
-                <a href="#" class="group w-12 h-12 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-download"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col items-center md:flex-row md:justify-between md:items-center text-center md:text-left">
-            <div class="mb-6 md:mb-0">
-                <h3 class="text-2xl font-bold">
-                    Rhyzil<span class="text-primary">.dev</span>
-                </h3>
-                <p class="text-gray-400 mt-2">
-                    IT Student & Cybersecurity Enthusiast
-                </p>
-            </div>
-<style>
-  .icon-box {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .icon-box:hover {
-    transform: translateY(-6px) scale(1.07);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
-  }
-  .icon-box i {
-    transition: transform 0.25s ease;
-  }
-  .icon-box:hover i {
-    transform: scale(1.15);
-  }
-</style>
-
-<div class="flex space-x-4">
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/" 
-     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
-    <i class="fab fa-linkedin text-white text-2xl"></i>
-  </a>
-
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/share/1BfJQz1r1R/" 
-     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
-    <i class="fab fa-facebook-f text-white text-2xl"></i>
-  </a>
-
-  <!-- Gmail -->
-  <a href="mailto:rhyzilangelopabadorajimenez@gmail.com" 
-     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
-    <i class="fas fa-envelope text-white text-2xl"></i>
-  </a>
-
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@rhyzilflow.netlify.app" 
-     class="icon-box w-16 h-16 bg-[#1f1f1f] flex items-center justify-center cursor-pointer rounded-none">
-    <i class="fab fa-tiktok text-white text-2xl"></i>
-  </a>
 </div>
 
+<div class="grid lg:grid-cols-3 gap-5 sm:gap-6">
 
-        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
-            <p>&copy; 2025 Rhyzil Angelo Pabadora Jimenez. All rights reserved.</p>
-        </div>
-    </div>
+<div class="lg:col-span-2 glass rounded-3xl p-6 sm:p-8 lg:p-10 reveal">
+
+<div class="flex items-center gap-4 mb-6">
+
+<div class="w-12 h-12 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-300">
+
+<i class="fa-solid fa-terminal"></i>
+
+</div>
+
+<div>
+
+<h3 class="text-lg sm:text-xl font-bold">
+Digital Profile
+</h3>
+
+<p class="font-mono text-[10px] text-slate-500">
+PROFILE.EXE
+</p>
+
+</div>
+
+</div>
+
+<p class="text-slate-400 leading-7 sm:leading-8">
+
+I am Rhyzil Angelo Pabadora Jimenez, an IT student with interests in cybersecurity, networking and software development. I enjoy learning how systems work, understanding security risks and creating useful technology.
+
+</p>
+
+<div class="grid sm:grid-cols-2 gap-3 sm:gap-4 mt-7">
+
+<div class="rounded-2xl bg-slate-950/70 border border-white/5 p-5">
+
+<div class="text-[10px] font-mono text-slate-500">
+EDUCATION
+</div>
+
+<div class="mt-2 font-semibold text-sm sm:text-base">
+BS Information Technology
+</div>
+
+</div>
+
+<div class="rounded-2xl bg-slate-950/70 border border-white/5 p-5">
+
+<div class="text-[10px] font-mono text-slate-500">
+FOCUS
+</div>
+
+<div class="mt-2 font-semibold text-sm sm:text-base">
+Cybersecurity & Web Development
+</div>
+
+</div>
+
+<div class="rounded-2xl bg-slate-950/70 border border-white/5 p-5">
+
+<div class="text-[10px] font-mono text-slate-500">
+INTERESTS
+</div>
+
+<div class="mt-2 font-semibold text-sm sm:text-base">
+IoT · Networking · Security
+</div>
+
+</div>
+
+<div class="rounded-2xl bg-slate-950/70 border border-white/5 p-5">
+
+<div class="text-[10px] font-mono text-slate-500">
+MINDSET
+</div>
+
+<div class="mt-2 font-semibold text-sm sm:text-base">
+Learn · Build · Secure
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass rounded-3xl p-6 sm:p-8 reveal">
+
+<div class="text-cyan-400 font-mono text-xs mb-6">
+SYSTEM STATUS
+</div>
+
+<div class="space-y-5">
+
+<div>
+
+<div class="flex justify-between text-sm mb-2">
+
+<span>Security</span>
+
+<span class="text-emerald-400">
+ACTIVE
+</span>
+
+</div>
+
+<div class="h-1.5 rounded-full bg-slate-800 overflow-hidden">
+
+<div class="h-full bg-emerald-400 w-[94%]"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between text-sm mb-2">
+
+<span>Networking</span>
+
+<span class="text-cyan-400">
+ACTIVE
+</span>
+
+</div>
+
+<div class="h-1.5 rounded-full bg-slate-800 overflow-hidden">
+
+<div class="h-full bg-cyan-400 w-[88%]"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between text-sm mb-2">
+
+<span>Development</span>
+
+<span class="text-violet-400">
+ACTIVE
+</span>
+
+</div>
+
+<div class="h-1.5 rounded-full bg-slate-800 overflow-hidden">
+
+<div class="h-full bg-violet-400 w-[90%]"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mt-8 pt-6 border-t border-white/5 font-mono text-[10px] text-slate-500 space-y-3">
+
+<div class="flex justify-between">
+<span>ENCRYPTION</span>
+<span class="text-emerald-400">READY</span>
+</div>
+
+<div class="flex justify-between">
+<span>INTEGRITY</span>
+<span class="text-emerald-400">VALID</span>
+</div>
+
+<div class="flex justify-between">
+<span>THREAT LEVEL</span>
+<span class="text-cyan-400">LOW</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="py-20 sm:py-28 border-y border-white/5 bg-slate-950/30">
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="reveal mb-10 sm:mb-12">
+
+<p class="font-mono text-cyan-400 text-xs sm:text-sm">
+03 // CAPABILITIES
+</p>
+
+<h2 class="text-4xl sm:text-5xl font-extrabold mt-3">
+Technical <span class="gradient-text">Skills</span>
+</h2>
+
+</div>
+
+<div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+
+<div class="glass rounded-3xl p-6 sm:p-7 reveal">
+
+<div class="flex items-center gap-4 mb-7">
+
+<div class="w-12 h-12 rounded-xl bg-red-400/10 text-red-300 flex items-center justify-center">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-lg sm:text-xl">
+Cybersecurity
+</h3>
+
+<p class="text-[10px] font-mono text-slate-500">
+DEFENSE_LAYER
+</p>
+
+</div>
+
+</div>
+
+<div class="space-y-5 skill-container">
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>Security Fundamentals</span>
+<span>92%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="92" class="skill-bar h-full bg-cyan-400"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>Ethical Hacking</span>
+<span>82%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="82" class="skill-bar h-full bg-violet-400"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>Identity & Access</span>
+<span>86%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="86" class="skill-bar h-full bg-fuchsia-400"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass rounded-3xl p-6 sm:p-7 reveal">
+
+<div class="flex items-center gap-4 mb-7">
+
+<div class="w-12 h-12 rounded-xl bg-cyan-400/10 text-cyan-300 flex items-center justify-center">
+
+<i class="fa-solid fa-network-wired"></i>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-lg sm:text-xl">
+Networking
+</h3>
+
+<p class="text-[10px] font-mono text-slate-500">
+NETWORK_LAYER
+</p>
+
+</div>
+
+</div>
+
+<div class="space-y-5 skill-container">
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>Network Security</span>
+<span>88%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="88" class="skill-bar h-full bg-cyan-400"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>Network Fundamentals</span>
+<span>90%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="90" class="skill-bar h-full bg-blue-400"></div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="flex justify-between mb-2 text-xs sm:text-sm">
+
+<span>IoT</span>
+<span>78%</span>
+
+</div>
+
+<div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+
+<div data-width="78" class="skill-bar h-full bg-indigo-400"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass rounded-3xl p-6 sm:p-7 reveal">
+
+<div class="flex items-center gap-4 mb-7">
+
+<div class="w-12 h-12 rounded-xl bg-yellow-400/10 text-yellow-300 flex items-center justify-center">
+
+<i class="fa-solid fa-code"></i>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-lg sm:text-xl">
+Web Development
+</h3>
+
+<p class="text-[10px] font-mono text-slate-500">
+APPLICATION_LAYER
+</p>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap gap-2">
+
+<span class="px-3 py-2 rounded-xl bg-orange-400/10 border border-orange-400/10 text-orange-300 text-xs">
+HTML5
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-cyan-400/10 border border-cyan-400/10 text-cyan-300 text-xs">
+Tailwind CSS
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-yellow-400/10 border border-yellow-400/10 text-yellow-300 text-xs">
+JavaScript
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-indigo-400/10 border border-indigo-400/10 text-indigo-300 text-xs">
+PHP
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-blue-400/10 border border-blue-400/10 text-blue-300 text-xs">
+MySQL
+</span>
+
+</div>
+
+</div>
+
+<div class="glass rounded-3xl p-6 sm:p-7 reveal">
+
+<div class="flex items-center gap-4 mb-7">
+
+<div class="w-12 h-12 rounded-xl bg-violet-400/10 text-violet-300 flex items-center justify-center">
+
+<i class="fa-solid fa-cloud"></i>
+
+</div>
+
+<div>
+
+<h3 class="font-bold text-lg sm:text-xl">
+Identity & Cloud
+</h3>
+
+<p class="text-[10px] font-mono text-slate-500">
+IDENTITY_LAYER
+</p>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap gap-2">
+
+<span class="px-3 py-2 rounded-xl bg-blue-400/10 border border-blue-400/10 text-blue-300 text-xs">
+Microsoft Entra ID
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-violet-400/10 border border-violet-400/10 text-violet-300 text-xs">
+Identity Management
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-emerald-400/10 border border-emerald-400/10 text-emerald-300 text-xs">
+Authentication
+</span>
+
+<span class="px-3 py-2 rounded-xl bg-fuchsia-400/10 border border-fuchsia-400/10 text-fuchsia-300 text-xs">
+Authorization
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="certifications" class="py-20 sm:py-28">
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12 reveal">
+
+<div>
+
+<p class="font-mono text-cyan-400 text-xs sm:text-sm">
+04 // VERIFIED KNOWLEDGE
+</p>
+
+<h2 class="text-4xl sm:text-5xl font-extrabold mt-3">
+Certifications
+</h2>
+
+</div>
+
+<div class="flex flex-wrap gap-2">
+
+<button type="button" data-cert-filter="all" class="cert-filter filter-active px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+All
+</button>
+
+<button type="button" data-cert-filter="microsoft" class="cert-filter px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+Microsoft
+</button>
+
+<button type="button" data-cert-filter="cisco" class="cert-filter px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+Cisco
+</button>
+
+</div>
+
+</div>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="microsoft">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-blue-400/10 flex items-center justify-center text-blue-300">
+<i class="fa-brands fa-microsoft"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+Create, configure, and manage identities
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Microsoft · September 23, 2025
+</p>
+
+</div>
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="microsoft">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-blue-400/10 flex items-center justify-center text-blue-300">
+<i class="fa-brands fa-microsoft"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+Authentication and authorization in cybersecurity
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Microsoft · September 23, 2025
+</p>
+
+</div>
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="microsoft">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-blue-400/10 flex items-center justify-center text-blue-300">
+<i class="fa-brands fa-microsoft"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+Concepts of cryptography
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Microsoft · September 23, 2025
+</p>
+
+</div>
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="cisco">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-300">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+Ethical Hacker
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Cisco Networking Academy · September 19, 2025
+</p>
+
+</div>
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="cisco">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-300">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+Introduction to Cybersecurity
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Cisco Networking Academy · September 19, 2025
+</p>
+
+</div>
+
+<div class="cert-card glass rounded-2xl p-6 reveal" data-cert="cisco">
+
+<div class="flex justify-between">
+
+<div class="w-11 h-11 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-300">
+<i class="fa-solid fa-code"></i>
+</div>
+
+<span class="text-[10px] font-mono text-emerald-400">
+VERIFIED
+</span>
+
+</div>
+
+<h3 class="font-bold mt-6 text-sm sm:text-base">
+JavaScript Essentials
+</h3>
+
+<p class="text-xs text-slate-500 mt-2">
+Cisco Networking Academy · September 25, 2025
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="py-20 sm:py-28 border-y border-white/5 bg-slate-950/30">
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="reveal mb-10 sm:mb-12">
+
+<p class="font-mono text-cyan-400 text-xs sm:text-sm">
+05 // BUILT SYSTEMS
+</p>
+
+<h2 class="text-4xl sm:text-5xl font-extrabold mt-3">
+Featured <span class="gradient-text">Projects</span>
+</h2>
+
+</div>
+
+<div class="flex flex-wrap gap-2 mb-8">
+
+<button type="button" data-project-filter="all" class="project-filter filter-active px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+All
+</button>
+
+<button type="button" data-project-filter="web" class="project-filter px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+Web
+</button>
+
+<button type="button" data-project-filter="security" class="project-filter px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+Security
+</button>
+
+<button type="button" data-project-filter="system" class="project-filter px-4 py-2 rounded-xl border border-white/10 text-xs sm:text-sm">
+Systems
+</button>
+
+</div>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="web">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-cyan-500/20 to-violet-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-globe text-5xl sm:text-6xl text-cyan-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-cyan-400">
+WEB / PORTFOLIO
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Rhyzil.Dev Portfolio
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Personal portfolio built with HTML5, Tailwind CSS and JavaScript.
+</p>
+
+<div class="flex flex-wrap gap-2 mt-5">
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-cyan-400/10 text-cyan-300">
+HTML
+</span>
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-cyan-400/10 text-cyan-300">
+Tailwind
+</span>
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-yellow-400/10 text-yellow-300">
+JS
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="web">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-calculator text-5xl sm:text-6xl text-violet-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-violet-400">
+WEB / APPLICATION
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Age Calculator
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Interactive application calculating age and related information.
+</p>
+
+<div class="flex flex-wrap gap-2 mt-5">
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-violet-400/10 text-violet-300">
+JavaScript
+</span>
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-cyan-400/10 text-cyan-300">
+Tailwind
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="security">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-red-500/20 to-orange-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-file-invoice-dollar text-5xl sm:text-6xl text-red-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-red-400">
+SECURITY / FULL STACK
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Client Billing & Invoice System
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Billing platform concept with authentication, access control and protected operations.
+</p>
+
+<div class="flex flex-wrap gap-2 mt-5">
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-indigo-400/10 text-indigo-300">
+PHP
+</span>
+
+<span class="text-[10px] px-3 py-1 rounded-lg bg-blue-400/10 text-blue-300">
+MySQL
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="system">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-emerald-500/20 to-cyan-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-address-book text-5xl sm:text-6xl text-emerald-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-emerald-400">
+SYSTEM / PHP
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Visitor Log System
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Visitor registration and tracking system with check-in and check-out management.
+</p>
+
+</div>
+
+</article>
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="system">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-book-open-reader text-5xl sm:text-6xl text-blue-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-blue-400">
+SYSTEM / DATABASE
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Library Log System
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Student authentication, attendance tracking and dashboard analytics.
+</p>
+
+</div>
+
+</article>
+
+<article class="project-card glass rounded-3xl overflow-hidden reveal" data-project="security">
+
+<div class="h-36 sm:h-40 bg-gradient-to-br from-fuchsia-500/20 to-purple-500/10 flex items-center justify-center">
+
+<i class="fa-solid fa-user-shield text-5xl sm:text-6xl text-fuchsia-300/70"></i>
+
+</div>
+
+<div class="p-6 sm:p-7">
+
+<div class="text-[10px] font-mono text-fuchsia-400">
+SECURITY / IDENTITY
+</div>
+
+<h3 class="text-lg sm:text-xl font-bold mt-3">
+Identity Security Lab
+</h3>
+
+<p class="text-slate-400 text-sm leading-7 mt-3">
+Conceptual environment focused on authentication, authorization and identity security.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="py-20 sm:py-28">
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="text-center reveal">
+
+<p class="font-mono text-cyan-400 text-xs sm:text-sm">
+06 // COMMUNICATION CHANNEL
+</p>
+
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mt-3">
+
+Let's <span class="gradient-text">Connect</span>
+
+</h2>
+
+<p class="text-slate-400 mt-5 max-w-2xl mx-auto leading-7 text-sm sm:text-base">
+
+Interested in cybersecurity, networking, web development or technology projects?
+
+</p>
+
+</div>
+
+<div class="mt-10 sm:mt-12 glass rounded-3xl p-5 sm:p-8 lg:p-10 reveal">
+
+<form id="contactForm" novalidate autocomplete="off">
+
+<div class="grid sm:grid-cols-2 gap-5">
+
+<div>
+
+<label for="name" class="block text-sm font-medium mb-2">
+Name
+</label>
+
+<input
+id="name"
+name="name"
+maxlength="80"
+required
+class="w-full rounded-xl bg-slate-950 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400 transition"
+placeholder="Your name">
+
+</div>
+
+<div>
+
+<label for="email" class="block text-sm font-medium mb-2">
+Email
+</label>
+
+<input
+id="email"
+name="email"
+type="email"
+maxlength="120"
+required
+class="w-full rounded-xl bg-slate-950 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400 transition"
+placeholder="you@example.com">
+
+</div>
+
+</div>
+
+<div class="mt-5">
+
+<label for="message" class="block text-sm font-medium mb-2">
+Message
+</label>
+
+<textarea
+id="message"
+name="message"
+maxlength="1000"
+rows="6"
+required
+class="w-full rounded-xl bg-slate-950 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400 transition resize-none"
+placeholder="Write your message..."></textarea>
+
+</div>
+
+<div class="mt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+
+<div class="font-mono text-[10px] text-slate-500">
+
+<i class="fa-solid fa-lock text-emerald-400 mr-2"></i>
+
+CLIENT VALIDATION ENABLED
+
+</div>
+
+<button
+type="submit"
+class="cyber-button w-full sm:w-auto px-6 py-3.5 rounded-xl bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-300 transition">
+
+Transmit Message
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="border-t border-white/5 py-10 bg-slate-950/70">
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="flex flex-col md:flex-row justify-between gap-6">
+
+<div>
+
+<div class="font-mono font-bold text-lg">
+
+<span class="text-cyan-400">
+RHYZIL
+</span>.DEV
+
+</div>
+
+<p class="text-sm text-slate-500 mt-2">
+IT Student · Cybersecurity Enthusiast · Builder
+</p>
+
+</div>
+
+<div class="font-mono text-[10px] text-slate-600">
+
+<div>
+SECURITY STATUS:
+<span class="text-emerald-400">
+ONLINE
+</span>
+</div>
+
+<div class="mt-1">
+© <span id="year"></span> Rhyzil.Dev
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </footer>
 
+<div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto sm:max-w-sm z-[100] translate-y-32 opacity-0 transition duration-300">
 
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+<div class="glass rounded-2xl px-5 py-4">
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                document.getElementById('mobile-menu').classList.add('hidden');
-            }
-        });
-    });
+<div class="flex gap-3">
 
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        let currentSection = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active-nav');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active-nav');
-            }
-        });
-    });
+<div class="text-cyan-300">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
 
-    function downloadResume() {
-        const resumeContent = `RHYZIL ANGELO PABADORA JIMENEZ
-================================
-Crossing Otabon, Tabango, Leyte
-rhyzilangelo@gmail.com
+<div>
 
-EDUCATION
----------
-Bachelor of Science in Information Technology (BSIT)
-Palompon Institute of Technology - Tabango
-2022 - Present
+<div id="toastTitle" class="font-bold text-sm">
+Security Notice
+</div>
 
-Shielded Metal Arc Welding (SMAW)
-Technical Vocational Education
+<div id="toastText" class="text-xs text-slate-400 mt-1"></div>
 
-High School
-Marcelino R. Veloso National High School
+</div>
 
-Elementary
-Tabango Central School
+</div>
 
-CERTIFICATIONS
---------------
-Microsoft Certifications:
-- Create, configure, and manage identities
-- Describe application-based threats and protection
-- Authentication and authorization in cybersecurity
-- Basic cybersecurity threats, attacks, and mitigations
-- Concepts of cryptography
-- Device-based threats and security controls
-- Network-based threats and mitigations
-- Authentication capabilities of Microsoft Entra ID
-- Function and identity types of Microsoft Entra ID
+</div>
 
-Cisco Certifications:
-- Ethical Hacker
-- Introduction to Cybersecurity
-- Introduction to IoT and Digital Transformation
-- HTML Essentials
-- CSS Essentials
-- JavaScript Essentials
+</div>
 
-Intent Code Masters 2025:
-- Certificate of Participation - Java Category
+<script>
 
-TECHNICAL SKILLS
-----------------
-Cybersecurity, Network Security, HTML, CSS, JavaScript, 
-Microsoft Entra ID, Identity Management, IoT, Ethical Hacking
+"use strict";
 
-PROJECTS
---------
-Rhyzil.Dev Portfolio Website
-- Responsive portfolio showcasing certifications and skills
-- Built with HTML, Tailwind CSS, and JavaScript
+const $=selector=>document.querySelector(selector);
 
-Age Calculator Application
-- Interactive app to calculate exact age with additional details
-- Built with HTML, Tailwind CSS, and JavaScript
+const $$=selector=>Array.from(document.querySelectorAll(selector));
 
-CONTACT
--------
-LinkedIn: https://www.linkedin.com/in/rhyzil-angelo-jimenez-3b1b7b33a/
-Facebook: https://www.facebook.com/share/1BfJQz1r1R/
-Email: rhyzilangelo@gmail.com`;
+const showToast=(title,message)=>{
 
-        const blob = new Blob([resumeContent], { type: 'text/plain' });
-        
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = 'Rhyzil_Angelo_Jimenez_Resume.txt';
-        
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    }
+$("#toastTitle").textContent=String(title);
 
-    function preventCopy(event) {
-        event.preventDefault();
-        alert("Copying content is not allowed!");
-    }
+$("#toastText").textContent=String(message);
 
-    document.addEventListener('copy', preventCopy);
+$("#toast").classList.remove("translate-y-32","opacity-0");
+
+$("#toast").classList.add("translate-y-0","opacity-100");
+
+clearTimeout(window.toastTimer);
+
+window.toastTimer=setTimeout(()=>{
+
+$("#toast").classList.remove("translate-y-0","opacity-100");
+
+$("#toast").classList.add("translate-y-32","opacity-0");
+
+},4000);
+
+};
+
+const typewriter=()=>{
+
+const target=$("#typewriter");
+
+const phrases=[
+
+"IT Student & Cybersecurity Enthusiast",
+
+"Web Developer & Technology Builder",
+
+"Networking & Security Learner",
+
+"Future Cybersecurity Professional"
+
+];
+
+let phrase=0;
+
+let index=0;
+
+let deleting=false;
+
+const tick=()=>{
+
+const current=phrases[phrase];
+
+target.textContent=current.substring(0,index);
+
+if(!deleting&&index<current.length){
+
+index++;
+
+setTimeout(tick,70);
+
+}
+
+else if(!deleting){
+
+deleting=true;
+
+setTimeout(tick,1700);
+
+}
+
+else if(deleting&&index>0){
+
+index--;
+
+setTimeout(tick,30);
+
+}
+
+else{
+
+deleting=false;
+
+phrase=(phrase+1)%phrases.length;
+
+setTimeout(tick,400);
+
+}
+
+};
+
+tick();
+
+};
+
+const createParticles=()=>{
+
+const container=$("#particles");
+
+const count=window.innerWidth<640?22:45;
+
+for(let i=0;i<count;i++){
+
+const particle=document.createElement("div");
+
+particle.className="particle";
+
+particle.style.left=Math.random()*100+"vw";
+
+particle.style.animationDuration=(7+Math.random()*13)+"s";
+
+particle.style.animationDelay=(-Math.random()*15)+"s";
+
+particle.style.opacity=(.2+Math.random()*.7).toFixed(2);
+
+container.appendChild(particle);
+
+}
+
+};
+
+const setupMouseGlow=()=>{
+
+const glow=$("#mouseGlow");
+
+if(!glow||window.matchMedia("(pointer:coarse)").matches)return;
+
+window.addEventListener("pointermove",event=>{
+
+glow.style.left=event.clientX+"px";
+
+glow.style.top=event.clientY+"px";
+
+},{passive:true});
+
+};
+
+const setupReveal=()=>{
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{threshold:.1});
+
+$$(".reveal").forEach(element=>observer.observe(element));
+
+};
+
+const setupSkills=()=>{
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.querySelectorAll(".skill-bar").forEach(bar=>{
+
+const width=Math.min(
+Math.max(Number(bar.dataset.width)||0,0),
+100
+);
+
+requestAnimationFrame(()=>{
+bar.style.width=width+"%";
+});
+
+});
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{threshold:.2});
+
+$$(".skill-container").forEach(element=>observer.observe(element));
+
+};
+
+const setupMobileMenu=()=>{
+
+$("#mobileBtn").addEventListener("click",()=>{
+
+$("#mobileMenu").classList.toggle("hidden");
+
+});
+
+$$(".mobile-link").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+$("#mobileMenu").classList.add("hidden");
+
+});
+
+});
+
+};
+
+const setupFilters=()=>{
+
+$$(".project-filter").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+$$(".project-filter").forEach(item=>
+item.classList.remove("filter-active")
+);
+
+button.classList.add("filter-active");
+
+const filter=button.dataset.projectFilter;
+
+$$(".project-card").forEach(card=>{
+
+const visible=
+filter==="all"||
+card.dataset.project===filter;
+
+card.style.display=visible?"block":"none";
+
+});
+
+});
+
+});
+
+$$(".cert-filter").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+$$(".cert-filter").forEach(item=>
+item.classList.remove("filter-active")
+);
+
+button.classList.add("filter-active");
+
+const filter=button.dataset.certFilter;
+
+$$(".cert-card").forEach(card=>{
+
+const visible=
+filter==="all"||
+card.dataset.cert===filter;
+
+card.style.display=visible?"block":"none";
+
+});
+
+});
+
+});
+
+};
+
+const setupNavigation=()=>{
+
+const sections=$$("main section[id]");
+
+const links=$$(".nav-link");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+links.forEach(link=>{
+
+link.classList.toggle(
+"active",
+link.getAttribute("href")==="#"+entry.target.id
+);
+
+});
+
+}
+
+});
+
+},{
+rootMargin:"-35% 0px -55% 0px"
+});
+
+sections.forEach(section=>observer.observe(section));
+
+};
+
+const setupForm=()=>{
+
+let lastSubmit=0;
+
+$("#contactForm").addEventListener("submit",event=>{
+
+event.preventDefault();
+
+const now=Date.now();
+
+if(now-lastSubmit<5000){
+
+showToast(
+"Rate limit",
+"Please wait a few seconds before sending another message."
+);
+
+return;
+
+}
+
+const form=new FormData(event.currentTarget);
+
+const name=String(form.get("name")||"").trim();
+
+const email=String(form.get("email")||"").trim();
+
+const message=String(form.get("message")||"").trim();
+
+if(name.length<2||name.length>80){
+
+showToast(
+"Validation failed",
+"Please enter a valid name."
+);
+
+return;
+
+}
+
+if(
+!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+){
+
+showToast(
+"Validation failed",
+"Please enter a valid email address."
+);
+
+return;
+
+}
+
+if(message.length<5||message.length>1000){
+
+showToast(
+"Validation failed",
+"Your message must contain 5–1000 characters."
+);
+
+return;
+
+}
+
+if(
+/<script|javascript:|onerror=|onload=/i
+.test(name+" "+email+" "+message)
+){
+
+showToast(
+"Blocked",
+"Potentially unsafe input was rejected."
+);
+
+return;
+
+}
+
+lastSubmit=now;
+
+event.currentTarget.reset();
+
+showToast(
+"Message validated",
+"Demo message accepted locally. Connect a secure backend before production."
+);
+
+});
+
+};
+
+const setupYear=()=>{
+
+$("#year").textContent=
+String(new Date().getFullYear());
+
+};
+
+typewriter();
+
+createParticles();
+
+setupMouseGlow();
+
+setupReveal();
+
+setupSkills();
+
+setupMobileMenu();
+
+setupFilters();
+
+setupNavigation();
+
+setupForm();
+
+setupYear();
 
 </script>
-
 
 </body>
 </html>
+```
